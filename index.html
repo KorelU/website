@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korel Ucpinar | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================== Header ================== -->
+<header>
+    <h1>Hi, my name is Korel Ucpinar</h1>
+
+    <!-- Navigation -->
+    <nav >
+        <a href="#about">About Me</a>
+        <a href="#open-source-projects">Open Source Projects</a>
+        <a href="#volunteering">Volunteering & Community Work</a>
+        <a href="#contact-me">Contact Me</a>
+
+        <!-- Social Icons -->
+    </nav>
+</header>
+
+<!-- ================== About Me ================== -->
+<section id="about">
+    <div class="left">
+        <h2>About Me</h2>
+        <div class="about-line">
+            <div class="left-align">CS @ Purdue University</div>
+            <div class="right-align">2023 - 2027</div>
+        </div>
+        <div class="about-line">
+            <div class="left-align">Cloud Developer Intern - Hewlett Packard Enterprise</div>
+            <div class="right-align">Summer 2025</div>
+        </div>
+        <div class="about-line">
+            <div class="left-align">DENT Project Mentee - The Linux Foundation </div>
+            <div class="right-align">2023 - 2025</div>
+        </div>
+        <div class="about-line">
+            <div class="left-align">Open Source Developer </div>
+            <div class="right-align">In my free time</div>
+        </div>
+
+    </div>
+    <div class="right">
+        <img src="photos/smiling_person.jpg" alt="Smiling person" class="profile-image">
+    </div>
+</section>
+
+<!-- ================== Open Source Projects ================== -->
+<section id="open-source-projects">
+    <div class="section-title">
+        <h2 style="font-size: 3em; text-align: center;">Open Source Projects</h2>
+    </div>
+
+    <div class="projects-container">
+        <!-- Project Card 1 -->
+        <div class="project">
+            <h3>Portable Speaker - 2025</h3>
+            <h4>A simple, battery powered and therefore portable arduino-based speaker</h4>
+            <img src="photos/Portable_Arduino_Based_Speaker.png" alt="Portable_Arduino_Based_Speaker" class="project-chart" style="width: 80%; max-width: 400px; margin: 1em auto; display: block; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+            <p class="chart-title">The diagram above is a circuit network diagram of the portable arduino speaker</p>
+            <p class="description">
+                This Arduino-powered portable speaker is a self-contained, battery-operated audio device designed for 
+                maximum portability and simplicity. It utilizes the DFPlayer Mini to play audio files directly from an SD card,
+                enabling automatic track looping. Powered by 6 AA-batteries, the speaker is easy to maintain, with quick and 
+                convenient battery replacement.
+                <br>
+                <br>
+                The concept for this speaker originated from collaborative discussions with Jackson Bowles, Alex Anthony, and Brenden Mahoney 
+                as a potential startup venture, where the idea evolved through brainstorming and feedback.
+            </p>
+            <div class="tech-icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" class="tech-logo" title="Arduino">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="tech-logo" title="C">
+            </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project">
+            <h3>KDAI - 2025</h3>
+            <h4>KDAI is a Loadable Kernel Module (LKM) for Linux systems that enhances Layer 2 network security by preventing ARP cache poisoning. </h4>
+            <img src="photos/kdai.png" alt="KDAI" class="project-chart" style="width: 100%; max-width: 400px; margin: 1em auto; display: block; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+            <p class="chart-title">Screenshot of GNS3 Simulaiton where multiple PC's in different VLANs are connected to a switch running KDAI</p>
+            <p class="description">
+                The Address Resolution Protocol (ARP) lacks built-in validation, making networks vulnerable to ARP cache poisoning and enabling man-in-the-middle or denial-of-service attacks. 
+                Enterprise-grade switches often offer Dynamic ARP Inspection (DAI) as a Layer 2 security feature to mitigate such risks. 
+                However, Linux-based networking environments have lacked an equivalent - until now. 
+                To fill this gap KDAI (Kernel Dynamic ARP Inspection), a Linux kernel module, was developed to implement DAI.
+                <br>
+                <br>
+                <p>
+                    KDAI is a Loadable Kernel Module (LKM) for Linux systems that enhances Layer 2 network security by preventing ARP cache poisoning.
+                    It operates by intercepting ARP messages traversing a Linux bridge and comparing ARP entries against a trusted database of IP-to-Mac address bindings.
+                    This database is built dynamically using DHCP Snooping but may also be populated using static ARP entries.      
+                    <br><br>              
+                    <b>Key Features:</b><br><br>
+                    <b>ARP Inspection:</b> Logs and drops ARP packets with mismatched IP-to-MAC bindings to prevent ARP spoofing.<br>
+                    <b>DHCP Snooping:</b> Builds a dynamic table by monitoring DHCP traffic to ensure valid IP-to-MAC bindings.<br>
+                    <b>Static ARP ACLs:</b> Allows manual configuration of trusted IP-to-MAC bindings.<br>
+                    <b>Interface Trust:</b> Interfaces can be marked as trusted (bypass checks) or untrusted (ARP inspection required).<br>
+                    <b>ARP Rate Limiting:</b> Limits ARP packets to 15 per second on untrusted interfaces to prevent flooding.<br>
+                    <b>Per-VLAN Support:</b> Applies rules independently to each VLAN for more granular control.
+                    </p>
+            </p>
+            <div class="tech-icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="tech-logo" title="C">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" title="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="tech-logo" title="Bash">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="tech-logo" title="Linux">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" class="tech-logo" title="Debian">
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project">
+            <h3>IEEE802.1x Docker Image - 2024</h3>
+            <h4>Custom Docker Image for IEEE 802.1x RADIUS Server & Authenticator</h4>
+            <img src="photos/DENT_IEEE_802.1x.jpg" alt="DENT_IEEE_802.1x" class="project-chart" style="width: 100%; max-width: 800px; margin: 1em auto; display: block; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+            <p class="chart-title">This diagram shows an 802.1X network setup where a supplicant (client) connects to an access point on an Authenticator (the TN48M Switch), 
+                which forwards authentication requests to a FreeRadius server running in a Docker container.</p>
+            <p class="description">
+                This Docker image simplifies the setup of IEEE 802.1X authentication by containerizing the Radius Server 
+                and using hostapd and FreeRadius to manage network access. When run on a device, the image configures it 
+                as both an Authenticator and an Authentication Server, allowing it to handle incoming EAPOL frames from 
+                Supplicants (devices seeking network access).
+                <br>
+                <br>
+                The device acts as an access point, blocking all non-EAP traffic until the authentication process completes.
+                It forwards EAP messages to the internal Radius server for credential validation. Once validated, the Radius server
+                sends either an Access-Accept or Access-Reject message, controlling whether the port is opened for normal traffic or
+                kept locked.
+                <br>
+                <br>
+                This setup lets administrators easily replicate the entire 802.1X handshake—including EAP-Start, identity exchange, 
+                RADIUS challenges, and authorization—without complex configuration. The use of hostapd for access point functionality 
+                and FreeRadius for credential checking makes it a powerful, flexible solution for network access control.
+            </p>
+            <div class="tech-icons">
+                <img src="photos/freeRadius.png" alt="freeRadius" class="tech-logo" title="freeRadius">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-logo" title="Docker">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="tech-logo" title="Bash">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="tech-logo" title="Linux">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" class="tech-logo" title="Debian">
+            </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project">
+            <h3>DENT Documentation - 2024</h3>
+            <h4>This Project was a step by step guide using GNS3 on how to configure a Linux Based Network Operating Systme called DENT</h4>
+            <img src="photos/BGP_Demo.png" alt="BGP_Demo" class="project-chart" style="width: 100%; max-width: 800px; margin: 1em auto; display: block; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
+            <p class="chart-title">
+                This diagram shows a classic instance of a network topology and is part of the how to configure BGP using 
+                Free Range Routing
+            </p>
+            <p class="description">
+                I authored documentation for DENT, an open-source Network Operating System,
+                and configured Linux devices for over 25 different TCP/IP networking topologies. 
+                <br>
+                <br>
+                This included tasks like addressing and filtering with DHCP, ACLs, and NAT; 
+                discovery and management using protocols like BGP, OSPF, STP, LLDP, and VRRP; 
+                VLAN configurations involving Linux bridges, VLANs, trunks, bonding, and LACP; 
+                and implementing IEEE 802.1X authentication with EAP-TLS and EAP-TTLS. 
+            </p>
+            <div class="tech-icons">
+                <img src="photos/dent-logo.png" alt="DENT_Logo" title="DENT_Logo" style="max-width: 10%; height: auto;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" alt="Markdown Logo" class="tech-logo" title="Markdown">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="tech-logo" title="Linux">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" class="tech-logo" title="Debian">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================== Volunteering ================== -->
+<section id="volunteering" style="border-radius: 10px;">
+    <div class="section-title">
+        <h2 style="font-size: 3em; text-align: center;">Volunteering & Community Work</h2>
+    </div>
+
+    <div class="projects-container">
+        <!-- Volunteer Card 1 -->
+        <div class="volunteer-card">
+            <h3>(CENG) Computer Engineers of the Next Generation - 2023</h3>
+            <h4>Teaching others how to program</h4>
+            <p>
+                As the VP of Teaching and Mentoring for CENG, I trained volunteers to teach elementary and middle school students 
+                how to program in Scratch, Java, and Python. Through effective mentoring and a structured curriculum, 
+                I maintained an impressive 92% student retention rate year after year, impacting approximately 300 children annually
+                 from 2019 to 2023
+            </p>
+            <div class="tech-icons">
+                <i class="fas fa-laptop-code" title="Coding"></i>
+                <i class="fas fa-chalkboard-teacher" title="Teaching"></i>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================== Contact Me ================== -->
+<section id="contact-me" style="border-radius: 10px;">
+    <div class="section-title">
+        <h2>Contact Me</h2>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <p>If you have any questions, project ideas, or just want to say hello, feel free to reach out!</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:kucpina@purdue.edu">kucpina@purdue.edu</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="social-icons">
+            <a href="https://www.linkedin.com/in/korelucpinar/" target="_blank">
+                <i class="fab fa-linkedin" title="LinkedIn"></i>
+            </a>
+            <a href="https://github.com/KorelU" target="_blank">
+                <i class="fab fa-github" title="GitHub"></i>
+            </a>
+        </div>
+</section>
+
+
+<!-- ================== Footer ================== -->
+<footer>
+    <div class="footer-content">
+        <p>Copyright © 2026 Korel Ucpinar</p>
+    </div>
+</footer>
+
+</body>
+</html>
