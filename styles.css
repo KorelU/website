@@ -1,32 +1,86 @@
+#socials{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: inherit;
+}
+
+#intro { 
+    display: flex;             /* Enable flexbox */
+    justify-content: space-between;  /* Space out the left and right sections */
+    padding: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: inherit;
+    color: white;             /* White text */
+    display: flex;             /* Enable flexbox */
+    flex-direction: row;       /* Ensure the layout is horizontal (rows) */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
 #about { 
-    background-color: rgba(255, 239, 229);
+        background-color: rgb(45, 44, 49);
+    background-color: inherit;
+    width: 100%;           /* Make the width fill 100% of the parent (or viewport) */
+    padding-top: 50px;   /* More space at the bottom */
+    line-height: 1.5;
 }
 
 /* Projects */
 #open-source-projects {
-     background-color: rgba(255, 235, 220);
+    background-color: rgb(45, 44, 49);
+    text-align: left;  /* Left-align the text inside the container */
+ 
 }
+/* Super large text class */
+.super-large {
+    font-weight: bold;  /* Bold the super large text */
+    letter-spacing: 0.05em;  /* Optional: Space the letters out a bit for extra effect */
+    line-height: 1.4;
+    text-transform: uppercase;  /* Optional: Make the text uppercase */
+    margin: 0;  /* Remove any margin */
+}
+
+/* Font size scaling based on h1, h2, and h3 default sizes */
+h1.super-large {
+    font-size: 8rem;  /* Scalable based on viewport width */
+}
+
+h2.super-large {
+    font-size: 6rem;  /* Slightly smaller than h1 */
+}
+
+h3.super-large {
+    margin-top: 5px;
+    font-size: 1.5rem;  /* Even smaller for h3 */
+}
+
+
+
 .project {
     flex: 0 0 500px;
     height: 750px;
     padding: 1.4em;
-    border-radius: 12px;
-    background-color: rgba(255, 224, 204);
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgb(47, 47, 54);
+    background-color: rgb(45, 44, 49);;
+        background-color: rgb(50, 50, 59);
+    background-color:rgb(58, 56, 63);;
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
 }
 #volunteering {
-    background-color: rgba(255, 220, 190);
+    background-color: rgb(45, 44, 49);
 }
 .volunteer-card {
     flex: 0 0 1300px;
     padding: 1.4em;
-    border-radius: 12px;
-    background-color: rgba(255, 229, 205);
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgb(45, 44, 49);
+    background-color:rgb(58, 56, 63);;
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -34,7 +88,10 @@
 }
 
 #contact-me {
-    background-color: rgba(255, 209, 179)
+    background-color: inherit;
+    /*background-color: rgb(45, 44, 49);*/
+    height: 200px;
+
 }
 
 
@@ -42,8 +99,9 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Consistent body font */
-    background-color: #f7f3ef;
-    color: #4b2e1e;
+    background-color:rgb(58, 56, 63);;
+    color: #ffffff;
+    
 }
 
 h1, h2, h3, h4 {
@@ -55,28 +113,26 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 3.5em;
     font-weight: 700;
-    color: #5d1f01;
+    color: #ffffff;
 }
 
 h2 {
     font-size: 2.5em;
     font-weight: 700;
-    color: #682500;
+    color: #c9b49e;
     text-decoration: underline; /* Adds an underline to the h2 */
-    padding-right: 500px; /* Adds padding to the right side */
-
 }
 
 h3 {
     font-size: 1.8em;
     font-weight: 700;
-    color: #513021;
+    color: #ffffff;
 }
 
 h4 {
     font-size: 1.3em;
     font-weight: 700;
-    color: #8d563f;
+    color: #ffffff;
 }
 
 /* Paragraphs & links */
@@ -84,25 +140,29 @@ p {
     font-family: 'Montserrat', sans-serif; /* Clean sans-serif for paragraphs */
     font-size: 1.05em;
     line-height: 1.7;
-    color: #5c3b2b;
 }
 
 a {
-    color: #a65e37;
+    color: hsl(0, 0%, 100%);
     text-decoration: none;
     font-weight: 700;
+    
 }
 
 a:hover {
-    color: #c48f6b;
+    color: #ffffff;
 }
 
 /* ---------- Header ---------- */
 header {
     background-color: rgb(207, 181, 156);
-    background-color: rgb(205, 159, 129);
-    padding: 2.5em 1em 0.5em 1em;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(45, 44, 49);
+    padding: 1.5em 1em 0.5em 1em;
     text-align: center;
+    color: #c9b49e;
+        color: white;
+
 }
 
 header h1 {
@@ -116,11 +176,10 @@ header h2 {
     font-weight: 400;
     font-size: 1.5em;
     margin-top: 0.5em;
-    color: #5f3924;
 }
 
 nav {
-    margin-top: 1.5em;
+    /*margin-top: 1.5em;*/
     margin-bottom: 1.0em;
 }
 
@@ -128,36 +187,39 @@ nav a {
     margin: 0 1em;
     font-size: 1.2em;
     text-decoration: underline; /* Adds an underline to all links */
+    color:#c9b49e;
+
 }
 
 /* Social Icons */
 .social-icons {
-    margin-top: 1.5em;
+    margin-top: 0em;
 }
 
 .social-icons a {
     margin: 0 0.6em;
     font-size: 1.6em;
-    color: #5a341f;
+    color: #ffffff;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .social-icons a:hover {
-    color: #8d563f;
+    color: #fcfbfa;
     transform: translateY(-3px);
 }
 
 /* ---------- Sections ---------- */
 section {
     max-width: 1500px;
-    margin: 3em auto;
+    margin: 2em auto;  /* Center the section horizontally */
+    padding: 2em;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 2em;
-    border-radius: 10px;
-    /*box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); */
-    /*transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    justify-content: left;  /* Center columns horizontally */
+    align-items: flex-start;  /* Align items at the top (you can change to center if needed) */
+    border-radius: 0px;
+    transition: background-color 0.5s ease;  /* Smooth transition for background color */
+    background-color: white;  /* Example background color */
 }
 
 
@@ -178,7 +240,7 @@ section {
 
 .project:hover {
     transform: translateY(-10px); /* Moves the card up by 10px */
-    box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .project h3 {
@@ -234,7 +296,7 @@ section {
 
 .volunteer-card:hover {
     transform: translateY(-10px); /* Moves the card up by 10px */
-    box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .volunteer-card h3 {
@@ -257,20 +319,21 @@ section {
     align-items: center;
     margin-top: 0.5em;
     font-size: 1.2em;
-    color: #5a341f;
+    color: #ffffff;
 }
 
 .volunteer-card .tech-icons i:hover {
     transform: scale(1.2);
-    color: #8d563f;
+    color: #ffffff;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* ---------- Footer ---------- */
 footer {
-    background-color: rgb(185, 119, 79);
-    background-color: rgb(205, 159, 129);
-    color: #fff8f0;
+
+    background-color: rgb(45, 44, 49);
+    color: #c9b49e;
+    color: white;
     text-align: right;
     padding: 0.1em 1em;
 }
@@ -289,11 +352,27 @@ footer {
     text-align: right;
 }
 
+#intro .left-align {
+    flex: 5;
+    text-align: left;
+}
+
+#intro .right {
+    flex: 1;
+    text-align: right;
+}
+
 .about-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1.4em;
+        color: white;
+
+}
+
+.highlight{
+    color:#c9b49e
 }
 
 .about-line-description {
@@ -315,23 +394,35 @@ footer {
     font-style: italic;
 }
 
-#about h2 {
-    font-size: 3em;
-    margin-bottom: 0.75em;
-}
 
-#about .about-line a:hover {
-    color: #c48f6b;
-    text-decoration: underline;
-}
-
-#about .right img.profile-image {
-    width: 100%;
+#intro .right img.profile-image {
+    /*width: 100%;
     max-width: 275px;
     border-radius: 15px;
     object-fit: cover;
     display: block;
-    margin-left: auto;
+    margin-left: auto;*/
+    width: 325px;          /* Set the size of the image */
+    height: 325px;         /* Set the height equal to the width to make it a perfect circle */
+    border-radius: 50%;    /* This makes the image a circle */
+    object-fit: cover;     /* Ensures the image covers the area without distortion */
+    border: 5px solid #c9b49e; /* Optional: adds a white border around the circle */
+    margin-top: 40px;
+}
+
+#about .right img.profile-image {
+    /*width: 100%;
+    max-width: 275px;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;*/
+    width: 300px;          /* Set the size of the image */
+    height: 300px;         /* Set the height equal to the width to make it a perfect circle */
+    border-radius: 50%;    /* This makes the image a circle */
+    object-fit: cover;     /* Ensures the image covers the area without distortion */
+    border: 5px solid white; /* Optional: adds a white border around the circle */
+    margin-top: 100px;
 }
 
 .project .chart-title {
@@ -387,28 +478,10 @@ footer {
 }
 
 .contact-info a {
-    color: #7c4a32; /* Lighter brown for links */
+    color: #6650b4; /* Lighter brown for links */
     text-decoration: none;
 }
 
 .contact-info a:hover {
     text-decoration: underline; /* Underline links on hover */
-}
-
-#contact-me .social-icons {
-    display: flex;
-    justify-content: left;
-    gap: 1.5em;
-    margin-top: 1em;
-}
-
-#contact-me .social-icons a {
-    font-size: 2.5em; /* Icon size */
-    color: #7c4a32; /* Matching the header color */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
-}
-
-#contact-me .social-icons a:hover {
-    color: #6b4028; /* Darker brown on hover */
-    transform: scale(1.1); /* Slightly enlarges on hover */
 }
