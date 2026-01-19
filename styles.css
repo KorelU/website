@@ -1,0 +1,414 @@
+#about { 
+    background-color: rgba(255, 239, 229);
+}
+
+/* Projects */
+#open-source-projects {
+     background-color: rgba(255, 235, 220);
+}
+.project {
+    flex: 0 0 500px;
+    height: 750px;
+    padding: 1.4em;
+    border-radius: 12px;
+    background-color: rgba(255, 224, 204);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+}
+#volunteering {
+    background-color: rgba(255, 220, 190);
+}
+.volunteer-card {
+    flex: 0 0 1300px;
+    padding: 1.4em;
+    border-radius: 12px;
+    background-color: rgba(255, 229, 205);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+}
+
+#contact-me {
+    background-color: rgba(255, 209, 179)
+}
+
+
+/* ---------- Base Styles ---------- */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Consistent body font */
+    background-color: #f7f3ef;
+    color: #4b2e1e;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif; /* Uniform serif font for headings */
+    margin: 0;
+}
+
+/* Headings */
+h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #5d1f01;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #682500;
+    text-decoration: underline; /* Adds an underline to the h2 */
+    padding-right: 500px; /* Adds padding to the right side */
+
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #513021;
+}
+
+h4 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #8d563f;
+}
+
+/* Paragraphs & links */
+p {
+    font-family: 'Montserrat', sans-serif; /* Clean sans-serif for paragraphs */
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #5c3b2b;
+}
+
+a {
+    color: #a65e37;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #c48f6b;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: rgb(207, 181, 156);
+    background-color: rgb(205, 159, 129);
+    padding: 2.5em 1em 0.5em 1em;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif; /* Ensures consistency in header */
+}
+
+header h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    color: #5f3924;
+}
+
+nav {
+    margin-top: 1.5em;
+    margin-bottom: 1.0em;
+}
+
+nav a {
+    margin: 0 1em;
+    font-size: 1.2em;
+    text-decoration: underline; /* Adds an underline to all links */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 1.5em;
+}
+
+.social-icons a {
+    margin: 0 0.6em;
+    font-size: 1.6em;
+    color: #5a341f;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #8d563f;
+    transform: translateY(-3px);
+}
+
+/* ---------- Sections ---------- */
+section {
+    max-width: 1500px;
+    margin: 3em auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 2em;
+    border-radius: 10px;
+    /*box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); */
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+
+.left, .right { 
+    flex: 1 1 45%;
+    font-family: 'Merriweather', serif; /* Distinct font for section content */
+}
+
+
+.projects-container {
+    display: flex;
+    gap: 1.5em;
+    overflow-x: auto;
+    padding: 1em 0;
+}
+
+
+
+.project:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+    box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.project h3 {
+    margin-bottom: 0.5em;
+}
+
+.project h4 {
+    font-weight: 400;
+}
+
+.project p:first-of-type {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.project p {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    line-height: 1.7;
+    font-weight: normal;
+}
+
+.project .tech-icons {
+    margin-top: auto;
+    display: flex;
+    justify-content: right;
+    gap: 0.5em;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25em;
+    align-items: center;
+}
+
+.tech-logo {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease;
+}
+
+.tech-logo:hover {
+    transform: scale(1.15);
+}
+
+/* Volunteering Cards */
+
+.volunteer-card:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+    box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.volunteer-card h3 {
+    margin-bottom: 0.5em;
+}
+
+.volunteer-card h4 {
+    font-weight: 400;
+    margin-bottom: 0.8em;
+}
+
+.volunteer-card p {
+    flex-grow: 1;
+}
+
+.volunteer-card .tech-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25em;
+    align-items: center;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #5a341f;
+}
+
+.volunteer-card .tech-icons i:hover {
+    transform: scale(1.2);
+    color: #8d563f;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: rgb(185, 119, 79);
+    background-color: rgb(205, 159, 129);
+    color: #fff8f0;
+    text-align: right;
+    padding: 0.1em 1em;
+}
+
+
+/* ----------- About Section ----------- */
+
+
+#about .left-align {
+    flex: 5;
+    text-align: left;
+}
+
+#about .right {
+    flex: 1;
+    text-align: right;
+}
+
+.about-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.4em;
+}
+
+.about-line-description {
+    display: flex;
+    align-items: left;
+    padding-bottom: 1.3em;
+}
+
+.left-align {
+    font-size: 1.8em;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+.right-align {
+    font-size: 1.4em;
+    text-align: right;
+    font-style: italic;
+}
+
+#about h2 {
+    font-size: 3em;
+    margin-bottom: 0.75em;
+}
+
+#about .about-line a:hover {
+    color: #c48f6b;
+    text-decoration: underline;
+}
+
+#about .right img.profile-image {
+    width: 100%;
+    max-width: 275px;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+}
+
+.project .chart-title {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: block;   /* Changed from inline-block to block for wrapping */
+    width: 100%;      /* Ensure the width is 100% of its container */
+    max-width: 100%;  /* Keep the max width at 100% */
+    height: auto;
+    line-height: 1.2; /* Adjusted line-height for better readability */
+    word-wrap: break-word; /* Ensure long words wrap */
+    white-space: normal;   /* Allow wrapping */
+    font-size: 0.8em;  /* Make text smaller (adjust as needed) */
+    font-weight: bold; /* Make the text bold */
+}
+
+.project .description {
+    line-height: 1.8;
+    margin-bottom: 1em;
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    section { flex-direction: column; padding: 1em; }
+    .left, .right { flex: 1 1 100%; text-align: left !important; }
+
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+
+    .projects-container { flex-wrap: wrap; justify-content: center; overflow-x: visible; }
+    .project, .volunteer-card { flex: 1 1 80%; }
+}
+
+
+
+.section-title {
+    margin-bottom: 1em; /* Space below the title */
+}
+
+.contact-container {
+    display: flex; /* Use flexbox for stacking */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items horizontally */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.contact-card {
+    text-align: left;
+    width: 100%;
+}
+
+.contact-info a {
+    color: #7c4a32; /* Lighter brown for links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+#contact-me .social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+#contact-me .social-icons a {
+    font-size: 2.5em; /* Icon size */
+    color: #7c4a32; /* Matching the header color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+#contact-me .social-icons a:hover {
+    color: #6b4028; /* Darker brown on hover */
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
