@@ -90,6 +90,7 @@ h3.super-large {
 #contact-me {
     background-color: inherit;
     /*background-color: rgb(45, 44, 49);*/
+    padding-top: 0;
     height: 200px;
 
 }
@@ -219,7 +220,8 @@ section {
     padding: 2em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;  /* Center columns horizontally */
+    justify-content: center;  /* Center columns horizontally */
+    text-align: left;
     align-items: flex-start;  /* Align items at the top (you can change to center if needed) */
     border-radius: 0px;
     transition: background-color 0.5s ease;  /* Smooth transition for background color */
