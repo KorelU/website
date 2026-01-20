@@ -18,8 +18,8 @@
     box-sizing: border-box; /* Ensure padding is included in the height */
 }
 #about { 
-        background-color: rgb(45, 44, 49);
-    background-color: inherit;
+        background-color: rgb(135, 110, 110);
+    /*background-color: inherit;*/
     width: 100%;           /* Make the width fill 100% of the parent (or viewport) */
     padding-top: 50px;   /* More space at the bottom */
     line-height: 1.5;
@@ -90,6 +90,7 @@ h3.super-large {
 #contact-me {
     background-color: inherit;
     /*background-color: rgb(45, 44, 49);*/
+    padding-top: 0;
     height: 200px;
 
 }
@@ -208,6 +209,10 @@ nav a {
     transform: translateY(-3px);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* ---------- Sections ---------- */
 section {
     max-width: 1500px;
@@ -215,7 +220,8 @@ section {
     padding: 2em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;  /* Center columns horizontally */
+    justify-content: center;  /* Center columns horizontally */
+    text-align: left;
     align-items: flex-start;  /* Align items at the top (you can change to center if needed) */
     border-radius: 0px;
     transition: background-color 0.5s ease;  /* Smooth transition for background color */
@@ -484,4 +490,10 @@ footer {
 
 .contact-info a:hover {
     text-decoration: underline; /* Underline links on hover */
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
