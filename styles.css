@@ -208,6 +208,10 @@ nav a {
     transform: translateY(-3px);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* ---------- Sections ---------- */
 section {
     max-width: 1500px;
