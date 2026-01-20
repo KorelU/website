@@ -489,3 +489,9 @@ footer {
 .contact-info a:hover {
     text-decoration: underline; /* Underline links on hover */
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
