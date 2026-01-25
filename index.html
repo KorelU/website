@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <script>
+        const pageWidth = 1400; // your page’s designed width
+        const screenWidth = window.innerWidth;
+        const scale = screenWidth / pageWidth;
+        document.querySelector('meta[name="viewport"]').setAttribute('content', `width=${pageWidth}, initial-scale=${scale}`);
+    </script>
     <title>Korel Ucpinar | Portfolio</title>
 
     <!-- Google Fonts -->
