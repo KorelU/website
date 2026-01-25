@@ -450,22 +450,6 @@ footer {
     margin-bottom: 1em;
 }
 
-
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-    section { flex-direction: column; padding: 1em; }
-    .left, .right { flex: 1 1 100%; text-align: left !important; }
-
-    h1 { font-size: 2.8em; }
-    h2 { font-size: 2em; }
-    h3 { font-size: 1.5em; }
-
-    .projects-container { flex-wrap: wrap; justify-content: center; overflow-x: visible; }
-    .project, .volunteer-card { flex: 1 1 80%; }
-}
-
-
-
 .section-title {
     margin-bottom: 1em; /* Space below the title */
 }
@@ -495,4 +479,22 @@ footer {
 html, body {
   margin: 0;
   padding: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+
+    html body header {
+        display: grid;              /* Use flexbox */
+        justify-content: center;    /* Center the links horizontally */
+        gap: 2em;                   /* Space between links */
+        flex-wrap: wrap;            /* Allow wrapping if screen is small */
+        margin-bottom: 1em;
+    }
+    html, body {
+        margin: 0em;
+        padding: 3em;
+        display: grid;
+        /* justify-content: center; */
+    }
 }
