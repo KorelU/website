@@ -19,7 +19,6 @@
 }
 #about { 
     background-color: inherit;
-    width: 100%;           /* Make the width fill 100% of the parent (or viewport) */
     padding-top: 50px;   /* More space at the bottom */
     line-height: 1.5;
 }
@@ -214,10 +213,9 @@ nav a {
 
 /* ---------- Sections ---------- */
 section {
-    max-width: 1250px;
-    margin: 2em auto;  /* Center the section horizontally */
+    max-width: 65%;
+    margin: 5em auto;  /* Center the section horizontally */
     padding: 2em;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;  /* Center columns horizontally */
     text-align: left;
@@ -229,7 +227,7 @@ section {
 
 
 .left, .right { 
-    flex: 1 1 45%;
+    flex: 1 1 0%;
     font-family: 'Merriweather', serif; /* Distinct font for section content */
 }
 
@@ -481,20 +479,22 @@ html, body {
   padding: 0;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 1200px) {
-
-    html body header {
+html body header {
         display: grid;              /* Use flexbox */
         justify-content: center;    /* Center the links horizontally */
         gap: 2em;                   /* Space between links */
         flex-wrap: wrap;            /* Allow wrapping if screen is small */
         margin-bottom: 1em;
     }
-    html, body {
-        margin: 0em;
-        padding: 3em;
-        display: grid;
-        /* justify-content: center; */
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1500px) {
+
+    section {
+        max-width: 90%;
     }
+    body{
+        height: 100%; 
+    }
+
 }
