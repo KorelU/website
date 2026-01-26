@@ -490,8 +490,40 @@ html body header {
 /* ---------- Responsive ---------- */
 @media (max-width: 1500px) {
 
+    h1.super-large{
+        font-size: 5rem;
+    }
+
+    #intro .right img.profile-image {
+        width: 225px;
+        height: 225px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #c9b49e;
+        margin-top: 40px;
+    }
+
+    .right-align {
+        font-size: 1em;
+        text-align: right;
+        font-style: italic;
+    }
+
+    .left-align {
+        font-size: 1.7em;
+        text-align: left;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+
+    nav a {
+
+        font-size: 1.0em;
+    }
+
     section {
         max-width: 90%;
+        margin: 2.5em;
     }
     body{
         height: 100%; 
