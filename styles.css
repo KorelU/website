@@ -213,7 +213,7 @@ nav a {
 
 /* ---------- Sections ---------- */
 section {
-    max-width: 80%;
+    max-width: 65%;
     margin: 5em auto;  /* Center the section horizontally */
     padding: 2em;
     flex-wrap: wrap;
@@ -579,7 +579,7 @@ html body header {
         border-radius: 50%;    /* This makes the image a circle */
         object-fit: cover;     /* Ensures the image covers the area without distortion */
         border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
-        margin-top: 40px;
+        margin-top: 30px;
     }
     .project{
         max-width: fit-content;
