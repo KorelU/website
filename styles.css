@@ -213,7 +213,7 @@ nav a {
 
 /* ---------- Sections ---------- */
 section {
-    max-width: 65%;
+    max-width: 75%;
     margin: 5em auto;  /* Center the section horizontally */
     padding: 2em;
     flex-wrap: wrap;
@@ -493,11 +493,125 @@ html body header {
     margin-bottom: 50px;
 }
 
+
 /* ---------- Responsive ---------- */
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
 
     section {
-        max-width: 85%;
+        max-width: 80%;
+    }
+    body{
+        height: 100%; 
+    }
+    
+    #about h2{
+        margin-bottom: 30px;
+    }
+    
+    /* Font size scaling based on h1, h2, and h3 default sizes */
+    h1.super-large {
+        font-size: 6rem;  /* Scalable based on viewport width */
+    }
+     h3.super-large {
+        font-size: 1.0rem;  /* Scalable based on viewport width */
+    }
+    h2 {
+        font-size: 2.25em;
+        font-weight: 700;
+        color: #c9b49e;
+        text-decoration: underline; /* Adds an underline to the h2 */
+    }
+    h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    h4 {
+        font-size: 1.3em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    .left-align {
+        font-size: 1.5em;
+        text-align: left;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+    .right-align {
+        font-size: 1em;
+    }
+    section{
+        margin: 1em auto;
+        padding: 2em;
+    }
+    #about {
+        margin: 1em auto;
+        padding: 0.5em;
+    }
+    nav{
+        margin-bottom: 0.5em;
+    }
+    .about-line{
+        gap: 10px
+    }
+
+    .social-icons a {
+        margin: 0 0.6em;
+        font-size: 1.2em;
+        color: #ffffff;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+
+    nav a {
+        margin: 0 0.25em;
+        font-size: 1em;
+        text-decoration: underline; /* Adds an underline to all links */
+        color:#c9b49e;
+    }
+    header{
+        padding: 1.5em 1em 0.5em 1em;
+        padding: 15px;
+        gap: 0.1px;
+    }
+    #intro .right img.profile-image {
+        width: 250px;          /* Set the size of the image */
+        height: 250px;         /* Set the height equal to the width to make it a perfect circle */
+        border-radius: 50%;    /* This makes the image a circle */
+        object-fit: cover;     /* Ensures the image covers the area without distortion */
+        border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
+        margin-top: 40px;
+    }
+    .project{
+        max-width: fit-content;
+    }
+    #about {
+        padding-top: 10px;
+    }
+
+    .contact-container {
+        display: flex; /* Use flexbox for stacking */
+        flex-direction: column; /* Stack items vertically */
+        align-items: left; /* Center items horizontally */
+        width: 100%; /* Ensure it takes full width */
+    }
+    
+    #contact-me {
+        background-color: inherit;
+        /*background-color: rgb(45, 44, 49);*/
+        padding-top: 0;
+        height: 200px;
+        margin: 2em auto;
+
+    }
+
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+
+    section {
+        max-width: 80%;
     }
     body{
         height: 100%; 
