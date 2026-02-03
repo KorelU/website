@@ -1,3 +1,7 @@
+.scroll-hint {
+    display: none;
+}
+
 #socials{
     padding: 0;
     margin-top: 0;
@@ -917,6 +921,16 @@ html body header {
         font-family: 'Montserrat', sans-serif; /* Clean sans-serif for paragraphs */
         font-size: 0.9em;
         line-height: 1.7;
+    }
+
+    .scroll-hint {
+        display: revert; /* restores default display */
+        font-size: 0.7rem;     /* really small */
+        font-style: italic;
+        opacity: 0.6;         /* subtle, non-distracting */
+        margin-top: 1em;
+        margin-bottom: 0em;
+        user-select: none;    /* optional: feels more like a hint */
     }
 
 
