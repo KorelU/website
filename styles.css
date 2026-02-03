@@ -5,6 +5,29 @@
     background-color: inherit;
 }
 
+/* Container to center the link */
+.github-link-container {
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* Styled GitHub button */
+.github-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: rgb(45, 44, 49);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.github-link:hover {
+    background-color: #444;
+}
+
 #intro { 
     display: flex;             /* Enable flexbox */
     justify-content: space-between;  /* Space out the left and right sections */
@@ -56,7 +79,7 @@ h3.super-large {
 
 .project {
     flex: 0 0 500px;
-    height: 750px;
+    height: 900px;
     padding: 1.4em;
     background-color: rgb(47, 47, 54);
     background-color: rgb(45, 44, 49);;
@@ -89,6 +112,9 @@ h3.super-large {
     background-color: inherit;
     /*background-color: rgb(45, 44, 49);*/
     padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
     height: 200px;
 
 }
@@ -183,7 +209,7 @@ nav {
 }
 
 nav a {
-    margin: 0 1em;
+    margin: 0 1.5em;
     font-size: 1.2em;
     text-decoration: underline; /* Adds an underline to all links */
     color:#c9b49e;
@@ -214,7 +240,7 @@ nav a {
 /* ---------- Sections ---------- */
 section {
     max-width: 75%;
-    margin: 5em auto;  /* Center the section horizontally */
+    margin: 4em auto;  /* Center the section horizontally */
     padding: 2em;
     flex-wrap: wrap;
     justify-content: center;  /* Center columns horizontally */
@@ -287,8 +313,8 @@ box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .tech-logo {
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 35px;
     transition: transform 0.2s ease;
 }
 
@@ -445,8 +471,9 @@ footer {
 }
 
 .project .description {
+    margin-top: 1em;
     line-height: 1.8;
-    margin-bottom: 1em;
+    margin-bottom: 2.0em;
 }
 
 .section-title {
@@ -493,9 +520,29 @@ html body header {
     margin-bottom: 50px;
 }
 
+#contact-me h2{
+    margin-bottom: 40px;
+}
+
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1600px) {
+
+    .project {
+        flex: 0 0 500px;
+        height: 750px;
+        padding: 1.4em;
+        background-color: rgb(47, 47, 54);
+        background-color: rgb(45, 44, 49);;
+            background-color: rgb(50, 50, 59);
+        background-color:rgb(58, 56, 63);;
+
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+    }
 
     section {
         max-width: 80%;
@@ -541,7 +588,7 @@ html body header {
         font-size: 1em;
     }
     section{
-        margin: 1em auto;
+        margin: 3em auto;
         padding: 2em;
     }
     #about {
@@ -564,7 +611,7 @@ html body header {
 
 
     nav a {
-        margin: 0 0.25em;
+        margin: 0 0.5em;
         font-size: 1em;
         text-decoration: underline; /* Adds an underline to all links */
         color:#c9b49e;
@@ -609,6 +656,21 @@ html body header {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1200px) {
+    .project {
+        flex: 0 0 500px;
+        height: 750px;
+        padding: 1.4em;
+        background-color: rgb(47, 47, 54);
+        background-color: rgb(45, 44, 49);;
+            background-color: rgb(50, 50, 59);
+        background-color:rgb(58, 56, 63);;
+
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+    }
 
     section {
         max-width: 80%;
@@ -654,7 +716,7 @@ html body header {
         font-size: 1em;
     }
     section{
-        margin: 1em auto;
+        margin: 2em auto;
         padding: 2em;
     }
     #about {
@@ -723,6 +785,21 @@ html body header {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 700px) {
+    .project {
+        flex: 0 0 500px;
+        height: 750px;
+        padding: 1.4em;
+        background-color: rgb(47, 47, 54);
+        background-color: rgb(45, 44, 49);;
+            background-color: rgb(50, 50, 59);
+        background-color:rgb(58, 56, 63);;
+
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+    }
     #intro{
         margin-left: 0 auto;
         margin-right: 0  auto;
@@ -753,7 +830,7 @@ html body header {
         text-decoration: underline; /* Adds an underline to the h2 */
     }
     h3 {
-        font-size: 1.5em;
+        font-size: 1.4em;
         font-weight: 700;
         color: #ffffff;
     }
@@ -831,7 +908,7 @@ html body header {
         /*background-color: rgb(45, 44, 49);*/
         padding-top: 0;
         height: 200px;
-        margin: 2em
+        margin: 2em auto
 
     }
 
