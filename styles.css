@@ -1,7 +1,7 @@
     /* Style the Read more button */
-    .read-more {
-        display: none;
-    }
+button.read-more {
+    visibility: hidden;
+}
 
 .scroll-hint {
     display: none;
@@ -794,6 +794,9 @@ html body header {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 700px) {
+    button.read-more {
+        visibility: unset;
+    }
     /*Takes up the space between read more and tech icons*/
     .project .description {
         margin-top: 0em;
