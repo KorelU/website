@@ -1,3 +1,8 @@
+    /* Style the Read more button */
+    .read-more {
+        display: none;
+    }
+
 .scroll-hint {
     display: none;
 }
@@ -82,7 +87,7 @@ h3.super-large {
 
 
 .project {
-    flex: 0 0 575px;
+    flex: 0 0 500px;
     height: 900px;
     padding: 1.4em;
     background-color: rgb(47, 47, 54);
@@ -533,7 +538,7 @@ html body header {
 @media (max-width: 1600px) {
 
     .project {
-        flex: 0 0 500px;
+        flex: 0 0 450px;
         height: 750px;
         padding: 1.4em;
         background-color: rgb(47, 47, 54);
@@ -661,7 +666,7 @@ html body header {
 /* ---------- Responsive ---------- */
 @media (max-width: 1200px) {
     .project {
-        flex: 0 0 500px;
+        flex: 0 0 425px;
         height: 750px;
         padding: 1.4em;
         background-color: rgb(47, 47, 54);
@@ -789,20 +794,38 @@ html body header {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 700px) {
-    .project {
-        flex: 0 0 500px;
-        height: 750px;
-        padding: 1.4em;
-        background-color: rgb(47, 47, 54);
-        background-color: rgb(45, 44, 49);;
-            background-color: rgb(50, 50, 59);
-        background-color:rgb(58, 56, 63);;
+    /*Takes up the space between read more and tech icons*/
+    .project .description {
+        margin-top: 0em;
+        line-height: 1.8;
+        margin-bottom: 0em;
+    }
 
+    .project .chart-title {
+        text-align: center;
+        margin-bottom: 1.1em;
+        padding: 0;
+        display: block;   /* Changed from inline-block to block for wrapping */
+        width: 100%;      /* Ensure the width is 100% of its container */
+        max-width: 100%;  /* Keep the max width at 100% */
+        height: auto;
+        line-height: 1.2; /* Adjusted line-height for better readability */
+        word-wrap: break-word; /* Ensure long words wrap */
+        white-space: normal;   /* Allow wrapping */
+        font-size: 0.8em;  /* Make text smaller (adjust as needed) */
+        font-weight: bold; /* Make the text bold */
+    }
+
+
+    .project {
+        flex: unset;   /* width stays fixed */
+        padding: 1.2em;
+        height: auto;
+        background-color: rgb(58, 56, 63);
         box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
-        overflow-y: auto;
-        display: flex;
+
         flex-direction: column;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     #intro{
         margin-left: 0 auto;
@@ -828,23 +851,23 @@ html body header {
         font-size: 0.75rem;  /* Scalable based on viewport width */
     }
     h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
         font-weight: 700;
         color: #c9b49e;
         text-decoration: underline; /* Adds an underline to the h2 */
     }
     h3 {
-        font-size: 1.4em;
+        font-size: 1.2em;
         font-weight: 700;
         color: #ffffff;
     }
     h4 {
-        font-size: 1.1em;
+        font-size: 1.0em;
         font-weight: 700;
         color: #ffffff;
     }
     .left-align {
-        font-size: 0.9em;
+        font-size: 1em;
         text-align: left;
         font-weight: bold;
         font-family: 'Merriweather', serif;
@@ -894,7 +917,7 @@ html body header {
         margin-top: 15px;
     }
     .project{
-        max-width: fit-content;
+        max-width: unset;
     }
     #about {
         padding-top: 10px;
@@ -919,19 +942,59 @@ html body header {
     /* Paragraphs & links */
     p {
         font-family: 'Montserrat', sans-serif; /* Clean sans-serif for paragraphs */
-        font-size: 0.9em;
+        font-size: 0.8em;
         line-height: 1.7;
     }
 
-    .scroll-hint {
-        display: revert; /* restores default display */
-        font-size: 0.7rem;     /* really small */
-        font-style: italic;
-        opacity: 0.6;         /* subtle, non-distracting */
-        margin-top: 1em;
-        margin-bottom: 0em;
-        user-select: none;    /* optional: feels more like a hint */
+
+    .projects-container {
+        display: flex;
+        flex-direction: column; /*  stack items vertically */
+        gap: 1.5em;
+        overflow-y: auto;       /* vertical scrolling instead of horizontal */
+        padding: 1em 0;
     }
+
+    /* Hide description initially */
+    .description {
+        max-height: 0;         /* completely hidden */
+        overflow: hidden;      /* prevent content from showing */
+        display: none; /* fully remove from layout */
+    }
+
+    /* When the project has the "expanded" class, show description */
+    .project.expanded .description {
+    max-height: 10000px; /* large enough to fit the content */
+    }
+
+    /* Style the Read more button */
+    .read-more {
+        margin-top: 1.5em;          /* distance from chart title */
+        margin-bottom: 1em;       
+        padding: 0;
+        background: none;
+        border: none;
+        color: #c9b49e;
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-align: left;           /* left justify */
+        display: inline-flex;       /* allow arrow to rotate inline */
+        align-items: center;        /* vertical alignment */
+        gap: 0.3em;                 /* space between text and arrow */
+        font-family: 'Merriweather', serif;
+    }
+
+    .read-more .arrow {
+        display: inline-block;
+        transition: transform 0.3s ease; /* smooth rotation */
+    }
+
+    /* rotate arrow when expanded */
+    .project.expanded .read-more .arrow {
+        transform: rotate(180deg); /* flips the arrow */
+        display: block; /* show content */
+    }
+
 
 
 }
