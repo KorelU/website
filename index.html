@@ -86,6 +86,7 @@
 <section id="open-source-projects">
     <div class="left">
         <h2>Open Source Projects</h2>
+        <h5 class="scroll-hint">Scroll to the right for more</h5>
     </div>
 
     <div class="projects-container">
@@ -102,7 +103,8 @@
                 </p>
                 <h4>A simple, battery powered and therefore portable arduino-based speaker</h4>
                 <img src="photos/Portable_Arduino_Based_Speaker.png" alt="Portable_Arduino_Based_Speaker" class="project-chart" style="width: 80%; max-width: 400px; margin: 2em auto; display: block; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
-                <p class="chart-title ">The diagram above is a circuit network diagram of the portable arduino speaker</p>
+                <p class="chart-title ">This diagram is for the circuit network of the portable arduino speaker</p>
+                <!-- description that is hidden initially -->
                 <p class="description">
                     This Arduino-powered portable speaker is a self-contained, battery-operated audio device designed for 
                     maximum portability and simplicity. It utilizes the DFPlayer Mini to play audio files directly from an SD card,
@@ -113,6 +115,9 @@
                     The concept for this speaker originated from collaborative discussions with Jackson Bowles, Alex Anthony, and Brenden Mahoney 
                     as a potential startup venture, where the idea evolved through brainstorming and feedback.
                 </p>
+                <button class="read-more">
+                Read more <span class="arrow">▼</span>
+                </button>
                 <div class="tech-icons">
                 <a href="https://www.arduino.cc/" target="_blank" rel="noopener noreferrer" title="Arduino">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"alt="Arduino"class="tech-logo">
@@ -143,19 +148,21 @@
                 To fill this gap KDAI (Kernel Dynamic ARP Inspection), a Linux kernel module, was developed to implement DAI.
                 <br>
                 <br>
-                    KDAI is a Loadable Kernel Module (LKM) for Linux systems that enhances Layer 2 network security by preventing ARP cache poisoning.
-                    It operates by intercepting ARP messages traversing a Linux bridge and comparing ARP entries against a trusted database of IP-to-Mac address bindings.
-                    This database is built dynamically using DHCP Snooping but may also be populated using static ARP entries.      
-                    <br><br>              
-                    <b>Key Features:</b><br><br>
-                    <b>ARP Inspection:</b> Logs and drops ARP packets with mismatched IP-to-MAC bindings to prevent ARP spoofing.<br>
-                    <b>DHCP Snooping:</b> Builds a dynamic table by monitoring DHCP traffic to ensure valid IP-to-MAC bindings.<br>
-                    <b>Static ARP ACLs:</b> Allows manual configuration of trusted IP-to-MAC bindings.<br>
-                    <b>Interface Trust:</b> Interfaces can be marked as trusted (bypass checks) or untrusted (ARP inspection required).<br>
-                    <b>ARP Rate Limiting:</b> Limits ARP packets to 15 per second on untrusted interfaces to prevent flooding.<br>
-                    <b>Per-VLAN Support:</b> Applies rules independently to each VLAN for more granular control.
-                    </p>
+                KDAI is a Loadable Kernel Module (LKM) for Linux systems that enhances Layer 2 network security by preventing ARP cache poisoning.
+                It operates by intercepting ARP messages traversing a Linux bridge and comparing ARP entries against a trusted database of IP-to-Mac address bindings.
+                This database is built dynamically using DHCP Snooping but may also be populated using static ARP entries.      
+                <br><br>              
+                <b>Key Features:</b><br><br>
+                <b>ARP Inspection:</b> Logs and drops ARP packets with mismatched IP-to-MAC bindings to prevent ARP spoofing.<br>
+                <b>DHCP Snooping:</b> Builds a dynamic table by monitoring DHCP traffic to ensure valid IP-to-MAC bindings.<br>
+                <b>Static ARP ACLs:</b> Allows manual configuration of trusted IP-to-MAC bindings.<br>
+                <b>Interface Trust:</b> Interfaces can be marked as trusted (bypass checks) or untrusted (ARP inspection required).<br>
+                <b>ARP Rate Limiting:</b> Limits ARP packets to 15 per second on untrusted interfaces to prevent flooding.<br>
+                <b>Per-VLAN Support:</b> Applies rules independently to each VLAN for more granular control.
             </p>
+            <button class="read-more">
+            Read more <span class="arrow">▼</span>
+            </button>
             <div class="tech-icons">
             <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer" title="C Language">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="tech-logo" style="width: 30px; height: 30px;">
@@ -167,14 +174,6 @@
 
             <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer" title="Bash">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="tech-logo">
-            </a>
-
-            <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" title="Linux">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="tech-logo">
-            </a>
-
-            <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer" title="Debian">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" class="tech-logo">
             </a>
             </div>
         </div>
@@ -192,7 +191,7 @@
             <h4>Custom Docker Image for IEEE 802.1x RADIUS Server & Authenticator</h4>
             <img src="photos/DENT_IEEE_802.1x.jpg" alt="DENT_IEEE_802.1x" class="project-chart" style="width: 100%; max-width: 800px; margin: 2em auto; display: block; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
             <p class="chart-title">This diagram shows an 802.1X network setup where a supplicant (client) connects to an access point on an Authenticator (a TN48M Switch), 
-                which forwards authentication requests to a FreeRadius server running in a Docker container.</p>
+                which forwards authentication requests to a FreeRadius server running in a Docker container</p>
             <p class="description">
                 This Docker image simplifies the setup of IEEE 802.1X authentication by containerizing the Radius Server 
                 and using hostapd and FreeRadius to manage network access. When run on a device, the image configures it 
@@ -210,6 +209,9 @@
                 RADIUS challenges, and authorization—without complex configuration. The use of hostapd for access point functionality 
                 and FreeRadius for credential checking makes it a powerful, flexible solution for network access control.
             </p>
+            <button class="read-more">
+            Read more <span class="arrow">▼</span>
+            </button>
             <div class="tech-icons">
             <a href="https://wiki.freeradius.org/" target="_blank" rel="noopener noreferrer" title="freeRADIUS">
                 <img src="photos/freeRadius.png" alt="freeRADIUS" class="tech-logo">
@@ -217,14 +219,8 @@
             <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" title="Docker">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-logo">
             </a>
-            <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer" title="Bash">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="tech-logo">
-            </a>
             <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" title="Linux">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="tech-logo">
-            </a>
-            <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer" title="Debian">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" class="tech-logo">
             </a>
             </div>
         </div>
@@ -255,17 +251,14 @@
                 VLAN configurations involving Linux bridges, VLANs, trunks, bonding, and LACP; 
                 and implementing IEEE 802.1X authentication with EAP-TLS and EAP-TTLS. 
             </p>
+            <button class="read-more">
+            Read more <span class="arrow">▼</span>
+            </button>
             <div class="tech-icons">
-                <a href="https://www.markdownguide.org/" target="_blank" rel="noopener noreferrer" title="Markdown">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" alt="Markdown Logo" class="tech-logo">
-                </a>
-                <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" title="Linux">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="tech-logo">
-                </a>
                 <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer" title="Debian">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" class="tech-logo">
                 </a>
-                <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer" title="Debian">
+                <a href="https://dent.dev/" target="_blank" rel="noopener noreferrer" title="DENT">
                             <img src="photos/dent-logo.png" alt="DENT_Logo" title="DENT_Logo" style="max-width: 5em; height: auto;">
                 </a>
             </div>
@@ -335,6 +328,9 @@
         <p>Copyright © 2026 Korel Ucpinar</p>
     </div>
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
