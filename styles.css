@@ -526,6 +526,7 @@ html body header {
 }
 
 #about h2{
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
@@ -561,6 +562,7 @@ html body header {
     }
     
     #about h2{
+        margin-top: 20px;
         margin-bottom: 30px;
     }
     
@@ -689,6 +691,7 @@ html body header {
     }
     
     #about h2{
+        margin-top: 20px;
         margin-bottom: 30px;
     }
     
@@ -843,7 +846,8 @@ html body header {
     }
     
     #about h2{
-        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
     
     /* Font size scaling based on h1, h2, and h3 default sizes */
