@@ -51,7 +51,6 @@ button.read-more {
 }
 #about { 
     background-color: inherit;
-    padding-top: 50px;   /* More space at the bottom */
     line-height: 1.5;
 }
 
@@ -526,7 +525,7 @@ html body header {
 }
 
 #about h2{
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 50px;
 }
 
@@ -638,7 +637,7 @@ html body header {
         border-radius: 50%;    /* This makes the image a circle */
         object-fit: cover;     /* Ensures the image covers the area without distortion */
         border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
-        margin-top: 40px;
+        margin-top: 20px;
     }
     .project{
         max-width: fit-content;
@@ -767,7 +766,7 @@ html body header {
         border-radius: 50%;    /* This makes the image a circle */
         object-fit: cover;     /* Ensures the image covers the area without distortion */
         border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
-        margin-top: 30px;
+        margin-top: 10px;
     }
     .project{
         max-width: fit-content;
