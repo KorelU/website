@@ -107,7 +107,9 @@
                 <!-- description that is hidden initially -->
                 <p class="description">
                     This Arduino-powered portable speaker is a self-contained, battery-operated audio device designed for 
-                    maximum portability and simplicity. It utilizes the DFPlayer Mini to play audio files directly from an SD card,
+                    maximum portability and simplicity. It utilizes the 
+                    <a href="https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299" target="_blank">DFPlayer Mini </a>
+                    to play audio files directly from an SD card,
                     enabling automatic track looping. Powered by 6 AA-batteries, the speaker is easy to maintain, with quick and 
                     convenient battery replacement.
                     <br>
@@ -142,23 +144,29 @@
             <img src="photos/kdai.png" alt="KDAI" class="project-chart" style="width: 100%; max-width: 400px; margin: 2em auto; display: block; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);">
             <p class="chart-title">Screenshot of GNS3 Simulaiton where multiple PC's in different VLANs are connected to a switch running KDAI</p>
             <p class="description">
-                The Address Resolution Protocol (ARP) lacks built-in validation, making networks vulnerable to ARP cache poisoning and enabling man-in-the-middle or denial-of-service attacks. 
-                Enterprise-grade switches often offer Dynamic ARP Inspection (DAI) as a Layer 2 security feature to mitigate such risks. 
+                <a href="https://en.wikipedia.org/wiki/Address_Resolution_Protocol" target="_blank">The Address Resolution Protocol (ARP) </a>
+                lacks built-in validation, making networks vulnerable to 
+                <a href="https://en.wikipedia.org/wiki/ARP_spoofing" target="_blank">ARP cache poisoning</a> 
+                and enabling man-in-the-middle or denial-of-service attacks. Enterprise-grade switches often offer 
+                <a href="https://www.juniper.net/documentation/us/en/software/junos/security-services/topics/topic-map/understanding-and-using-dai.html" target="_blank">Dynamic ARP Inspection (DAI) </a>
+                as a Layer 2 security feature to mitigate such risks. 
                 However, Linux-based networking environments have lacked an equivalent - until now. 
                 To fill this gap KDAI (Kernel Dynamic ARP Inspection), a Linux kernel module, was developed to implement DAI.
                 <br>
                 <br>
                 KDAI is a Loadable Kernel Module (LKM) for Linux systems that enhances Layer 2 network security by preventing ARP cache poisoning.
                 It operates by intercepting ARP messages traversing a Linux bridge and comparing ARP entries against a trusted database of IP-to-Mac address bindings.
-                This database is built dynamically using DHCP Snooping but may also be populated using static ARP entries.      
+                This database is built dynamically using 
+                <a href="https://en.wikipedia.org/wiki/DHCP_snooping" target="_blank">DHCP Snooping</a>
+                but may also be populated using static ARP entries.      
                 <br><br>              
                 <b>Key Features:</b><br><br>
-                <b>ARP Inspection:</b> Logs and drops ARP packets with mismatched IP-to-MAC bindings to prevent ARP spoofing.<br>
-                <b>DHCP Snooping:</b> Builds a dynamic table by monitoring DHCP traffic to ensure valid IP-to-MAC bindings.<br>
-                <b>Static ARP ACLs:</b> Allows manual configuration of trusted IP-to-MAC bindings.<br>
-                <b>Interface Trust:</b> Interfaces can be marked as trusted (bypass checks) or untrusted (ARP inspection required).<br>
-                <b>ARP Rate Limiting:</b> Limits ARP packets to 15 per second on untrusted interfaces to prevent flooding.<br>
-                <b>Per-VLAN Support:</b> Applies rules independently to each VLAN for more granular control.
+                - <b>ARP Inspection:</b> Logs and drops ARP packets with mismatched IP-to-MAC bindings to prevent ARP spoofing.<br><br>
+                - <b>DHCP Snooping:</b> Builds a dynamic table by monitoring DHCP traffic to ensure valid IP-to-MAC bindings.<br><br>
+                - <b>Static ARP ACLs:</b> Allows manual configuration of trusted IP-to-MAC bindings.<br><br>
+                - <b>Interface Trust:</b> Interfaces can be marked as trusted (bypass checks) or untrusted (ARP inspection required).<br><br>
+                - <b>ARP Rate Limiting:</b> Limits ARP packets to 15 per second on untrusted interfaces to prevent flooding.<br><br>
+                - <b>Per-VLAN Support:</b> Applies rules independently to each VLAN for more granular control.
             </p>
             <button class="read-more">
             Read more <span class="arrow">▼</span>
@@ -193,21 +201,27 @@
             <p class="chart-title">This diagram shows an 802.1X network setup where a supplicant (client) connects to an access point on an Authenticator (a TN48M Switch), 
                 which forwards authentication requests to a FreeRadius server running in a Docker container</p>
             <p class="description">
-                This Docker image simplifies the setup of IEEE 802.1X authentication by containerizing the Radius Server 
-                and using hostapd and FreeRadius to manage network access. When run on a device, the image configures it 
-                as both an Authenticator and an Authentication Server, allowing it to handle incoming EAPOL frames from 
-                Supplicants (devices seeking network access).
-                <br>
-                <br>
+                This Docker image simplifies the setup of 
+                <a href="https://en.wikipedia.org/wiki/IEEE_802.1X" target="_blank">IEEE 802.1X</a> authentication by containerizing the 
+                <a href="https://en.wikipedia.org/wiki/RADIUS" target="_blank">RADIUS server</a> 
+                and using 
+                <a href="https://wireless.docs.kernel.org/en/latest/en/users/documentation/hostapd.html" target="_blank">hostapd</a> 
+                and 
+                <a href="https://freeradius.org/" target="_blank">FreeRADIUS</a> 
+                to manage network access. When run on a device, the image configures it 
+                as both an Authenticator and an Authentication Server, allowing it to handle incoming EAPOL
+                frames from Supplicants (devices seeking network access).
+                <br><br>
+
                 The device acts as an access point, blocking all non-EAP traffic until the authentication process completes.
-                It forwards EAP messages to the internal Radius server for credential validation. Once validated, the Radius server
+                It forwards EAP messages to the internal RADIUS server for credential validation. Once validated, the RADIUS server
                 sends either an Access-Accept or Access-Reject message, controlling whether the port is opened for normal traffic or
                 kept locked.
-                <br>
-                <br>
-                This setup lets administrators easily replicate the entire 802.1X handshake—including EAP-Start, identity exchange, 
-                RADIUS challenges, and authorization—without complex configuration. The use of hostapd for access point functionality 
-                and FreeRadius for credential checking makes it a powerful, flexible solution for network access control.
+                <br><br>
+
+                This setup lets administrators easily replicate the entire 802.1X handshake-including EAP-Start, identity exchange, 
+                RADIUS challenges, and authorization-without complex configuration. The use of hostapd for access point functionality 
+                and FreeRADIUS for credential checking makes it a powerful, flexible solution for network access control.
             </p>
             <button class="read-more">
             Read more <span class="arrow">▼</span>
@@ -242,14 +256,41 @@
                 Free Range Routing
             </p>
             <p class="description">
-                I authored documentation for DENT, an open-source Network Operating System,
-                and configured Linux devices for over 25 different TCP/IP networking topologies. 
+                Authored documentation for DENT, an open-source Network Operating System,
+                and configured ~30 different networking topologies across the TCP/IP suite of protocls. 
                 <br>
                 <br>
-                This included tasks like addressing and filtering with DHCP, ACLs, and NAT; 
-                discovery and management using protocols like BGP, OSPF, STP, LLDP, and VRRP; 
-                VLAN configurations involving Linux bridges, VLANs, trunks, bonding, and LACP; 
-                and implementing IEEE 802.1X authentication with EAP-TLS and EAP-TTLS. 
+                Topologies included but are not limited to variaitons on addressing and filtering with 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkAddressingAndFilteringSubCategories/DHCP.html" target="_blank">DHCP</a> 
+                , 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkAddressingAndFilteringSubCategories/ACL-Support.html" target="_blank">ACLs</a> 
+                , and 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkAddressingAndFilteringSubCategories/Stateless-NAT.html#stateless-network-address-translation-nat" target="_blank">NAT</a> 
+                ; 
+                discovery and management using protocols like 
+                <a href="https://docs.dent.dev/NetworkConfigurations/RoutingAndForwarding/BGP_BorderGatewayProtocol.html#enable-bgp" target="_blank">BGP</a> 
+                , 
+                <a href="https://docs.dent.dev/NetworkConfigurations/RoutingAndForwarding/OSPFv3.html#open-shortest-path-first-version-3-ospfv3" target="_blank">OSPF</a> 
+                ,
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkDiscoveryAndManagementSubCategories/STP_SpanningTreeProtocol.html" target="_blank">STP</a>  
+                ,
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkDiscoveryAndManagementSubCategories/LLDP_LinkLayerDiscoveryProtocol.html" target="_blank">LLDP</a>   
+                , and 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkDiscoveryAndManagementSubCategories/VRRP_VirtualRouterRedundancyProtocol.html" target="_blank">VRRP</a>   
+                ; 
+                VLAN configurations involving 
+                <a href="https://docs.dent.dev/NetworkConfigurations/VLANConfigurationSubCategories/BridgingL2.html#bridges" target="_blank">Linux bridges</a>   
+                , 
+                <a href="https://docs.dent.dev/NetworkConfigurations/VLANConfigurationSubCategories/VLANsSetUp.html#bridges-and-vlans" target="_blank">VLANs</a>   
+                ,
+                <a href="https://docs.dent.dev/NetworkConfigurations/VLANConfigurationSubCategories/Trunks.html" target="_blank">trunks</a>   
+                trunks
+                ,
+                <a href="https://docs.dent.dev/NetworkConfigurations/VLANConfigurationSubCategories/RoutingOverVLANs.html" target="_blank">routing over vlans</a>   
+                , and 
+                implementing 
+                <a href="https://docs.dent.dev/PlatformConfigurations/IEEE802.1xPortBasedAuthentication.html" target="_blank">IEEE 802.1X</a>    
+                authentication with EAP-TLS and EAP-TTLS. 
             </p>
             <button class="read-more">
             Read more <span class="arrow">▼</span>

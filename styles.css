@@ -1,4 +1,19 @@
-    /* Style the Read more button */
+/* Underlines links in descrption paragrpahs*/
+.description a {
+    font-weight: normal;
+    /* color: #55a7fe; */
+    color: #9eccfc;              /* text stays normal */
+    text-decoration: underline;
+    /* text-decoration-color: #4da3ff;  underline only */
+}
+
+.description a:hover {
+    text-decoration-thickness: 2px;
+    color: #7db9f9;
+
+}
+ 
+ /* Style the Read more button */
 button.read-more {
     visibility: hidden;
 }
