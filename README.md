@@ -11,6 +11,7 @@ This website is a compilation of my personal and professional achievements. It i
 
 - [About Me](#about-me)
 - [Open Source Projects](#open-source-projects)
+- [Notes](#notes)
 - [Volunteering & Community Work](#volunteering--community-work)
 - [Contact Me](#contact-me)
 
@@ -24,6 +25,9 @@ Learn more about my background, experience, and the journey that shaped my skill
 
 Showcasing contributions to open source projects, highlighting my coding skills and collaborative work.
 
+### [Notes](https://www.korelucpinar.com/#notes)
+
+Tradiitonally complex or difficult concepts made simple or easy to refrence and learn.
 
 ### [Volunteering & Community Work](https://www.korelucpinar.com/#volunteering)
 
