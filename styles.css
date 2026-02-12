@@ -4,11 +4,15 @@ margin: 1em;
 max-width: 100%;
 background-color: rgb(45, 44, 49);
   box-sizing: border-box;;
-overflow-x: auto;
 padding: 1.25em;
-
-
 }
+
+/*Change this if you want to change notes section card size*/
+/* .notes-card.left {
+    flex: 1 1 40%;
+    max-width: 700px;
+    max-height: 1000px;
+} */
 
 .code-section h3 {
     font-size: 1.0em;
@@ -54,6 +58,20 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 }
 
+@media (max-width: 1200px) {
+    .code-section code {
+        font-size:0.7em ;
+    }
+    .code-section pre{
+        padding: 9px;
+    }
+    .code-section {
+        margin-left: 0em;
+        margin-right: 0em;
+        padding: 1em;
+    }
+}
+
 .code-section code {
 font-family: "Courier New", monospace;
 color: white;               /* Light text */
@@ -64,7 +82,7 @@ color: white;               /* Light text */
 }
 
 .notes-card {
-    flex: 0 0 1300px;
+    flex: 1 1 40%;
     padding: 1.1em;
     background-color: rgb(45, 44, 49);
     background-color:rgb(58, 56, 63);;
