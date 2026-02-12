@@ -47,7 +47,7 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         font-size:0.7em ;
     }
     .code-section pre{
-        padding: 10px;
+        padding: 9px;
     }
     .code-section {
         padding: 1em;
@@ -381,7 +381,6 @@ section {
     align-items: flex-start;  /* Align items at the top (you can change to center if needed) */
     border-radius: 0px;
     transition: background-color 0.5s ease;  /* Smooth transition for background color */
-    background-color: white;  /* Example background color */
 }
 
 
