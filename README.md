@@ -24,6 +24,9 @@ Learn more about my background, experience, and the journey that shaped my skill
 
 Showcasing contributions to open source projects, highlighting my coding skills and collaborative work.
 
+### [Notes](https://www.korelucpinar.com/#notes)
+
+Tradiitonally complex or difficult concepts made simple or easy to refrence and learn.
 
 ### [Volunteering & Community Work](https://www.korelucpinar.com/#volunteering)
 
