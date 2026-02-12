@@ -11,6 +11,7 @@ This website is a compilation of my personal and professional achievements. It i
 
 - [About Me](#about-me)
 - [Open Source Projects](#open-source-projects)
+- [Notes](#notes)
 - [Volunteering & Community Work](#volunteering--community-work)
 - [Contact Me](#contact-me)
 
