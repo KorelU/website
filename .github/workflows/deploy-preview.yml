@@ -1,4 +1,4 @@
-name: Deploy Preview
+name: Deploy Previews and Main Site
 
 on:
   push:
@@ -6,21 +6,42 @@ on:
       - '**'  # all branches
 
 jobs:
-  preview:
+  deploy:
     runs-on: ubuntu-latest
+    env:
+      SANITIZED_BRANCH: ${{ github.ref_name || github.head_ref }}
+      REPO_NAME: ${{ github.repository }}
+      USERNAME: ${{ github.repository_owner }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Build site
         run: |
-          # If you have a build step, run it here
-          # For pure HTML, you can skip this
+          # If using plain HTML, no build is needed
           echo "No build needed for static HTML"
 
-      - name: Deploy to branch-specific GitHub Pages
+      - name: Deploy branch previews
+        if: github.ref != 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./  # root folder with index.html
-          destination_branch: gh-pages-preview-${{ github.ref_name }}
+          destination_branch: gh-pages-preview-${{ env.SANITIZED_BRANCH//\//- }}
+
+      - name: Deploy live site from main
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # root folder with index.html
+          destination_branch: gh-pages  # live GitHub Pages branch
+
+      - name: Comment PR with preview link
+        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          message: |
+            Preview your branch here: 
+            https://${{ env.USERNAME }}.github.io/${{ env.REPO_NAME }}/gh-pages-preview-${{ env.SANITIZED_BRANCH//\//- }}/
