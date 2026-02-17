@@ -1,0 +1,25 @@
+name: Deploy Preview
+
+on:
+  push:
+    branches:
+      - "**"   # triggers on any branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create branch folder
+        run: mkdir -p preview/$GITHUB_REF_NAME && cp index.html preview/$GITHUB_REF_NAME/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./preview
+
+      - uses: actions/deploy-pages@v4
