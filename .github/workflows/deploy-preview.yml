@@ -1,47 +1,42 @@
-name: Deploy Previews and Main Site
+name: Deploy Site
 
 on:
   push:
     branches:
-      - '**'  # all branches
+      - '**'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      SANITIZED_BRANCH: ${{ github.ref_name || github.head_ref }}
-      REPO_NAME: ${{ github.repository }}
-      USERNAME: ${{ github.repository_owner }}
+      BRANCH: ${{ github.ref_name || github.head_ref }}
+      USER: ${{ github.repository_owner }}
+      REPO: ${{ github.repository }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Build site
-        run: |
-          # If using plain HTML, no build is needed
-          echo "No build needed for static HTML"
+        run: echo "No build needed for static HTML"
 
-      - name: Deploy branch previews
+      - name: Deploy previews
         if: github.ref != 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # root folder with index.html
-          destination_branch: gh-pages-preview-${{ env.SANITIZED_BRANCH//\//- }}
+          publish_dir: ./
+          destination_branch: gh-pages-preview-${{ env.BRANCH//\//- }}
 
-      - name: Deploy live site from main
+      - name: Deploy live site
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # root folder with index.html
-          destination_branch: gh-pages  # live GitHub Pages branch
+          publish_dir: ./
+          destination_branch: gh-pages
 
       - name: Comment PR with preview link
-        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        if: github.ref != 'refs/heads/main'
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          message: |
-            Preview your branch here: 
-            https://${{ env.USERNAME }}.github.io/${{ env.REPO_NAME }}/gh-pages-preview-${{ env.SANITIZED_BRANCH//\//- }}/
+          message: "Preview: https://${{ env.USER }}.github.io/${{ env.REPO }}/gh-pages-preview-${{ env.BRANCH//\//- }}/"
