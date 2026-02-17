@@ -3,7 +3,7 @@ name: Deploy Static Site
 on:
   push:
     branches:
-      - "**"   # run on all branches
+      - "**"
 
 permissions:
   contents: read
@@ -14,7 +14,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: github-pages-${{ github.ref_name }}
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
@@ -24,7 +24,7 @@ jobs:
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .   # root folder containing index.html
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
