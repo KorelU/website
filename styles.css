@@ -228,9 +228,8 @@ h3.super-large {
 
 
 .project {
-    flex: 0 0 550px;
-    flex: 0 0 650px;
-    height: 1000px;
+    flex: 0 0 600px;
+    height: 800px;
     padding: 1.4em;
     background-color: rgb(47, 47, 54);
     background-color: rgb(45, 44, 49);;
@@ -681,9 +680,9 @@ html body header {
 
     .project {
         flex: 0 0 500px;
-        flex: 0 0 650px;
-        height: 900px;
-        padding: 1.4em;
+        flex: 0 0 450px;
+        height: 575px;
+        padding: 1.8em;
         background-color: rgb(47, 47, 54);
         background-color: rgb(45, 44, 49);;
             background-color: rgb(50, 50, 59);
@@ -703,6 +702,7 @@ html body header {
     }
 
     p {
+        /* font-size: 0.5em; */
         line-height: 2;
     }
 
@@ -822,8 +822,7 @@ html body header {
 @media (max-width: 1200px) {
     .project {
         flex: 0 0 425px;
-        flex: 0 0 500px;
-        height: 750px;
+        height: 650px;
         padding: 1.4em;
         background-color: rgb(47, 47, 54);
         background-color: rgb(45, 44, 49);;
