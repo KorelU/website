@@ -1,0 +1,26 @@
+name: Deploy Preview
+
+on:
+  push:
+    branches:
+      - '**'  # all branches
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build site
+        run: |
+          # If you have a build step, run it here
+          # For pure HTML, you can skip this
+          echo "No build needed for static HTML"
+
+      - name: Deploy to branch-specific GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # root folder with index.html
+          destination_branch: gh-pages-preview-${{ github.ref_name }}
