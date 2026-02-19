@@ -2,18 +2,34 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 
-      - '*'  # any branch
+    branches:
+      - '**'   # run on ALL branches
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./   # your index.html lives here
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          destination_dir: ${{ github.ref_name == 'main' && '' || github.ref_name }}
+        id: deployment
+        uses: actions/deploy-pages@v4
