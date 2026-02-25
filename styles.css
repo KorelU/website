@@ -794,7 +794,7 @@ html body header {
         margin-top: 20px;
     }
     .project{
-        max-width: fit-content;
+        /* max-width: fit-content; */
     }
     #about {
         padding-top: 10px;
@@ -923,7 +923,7 @@ html body header {
         margin-top: 10px;
     }
     .project{
-        max-width: fit-content;
+        /* max-width: fit-content; */
     }
     #about {
         padding-top: 10px;
