@@ -1,5 +1,9 @@
     button.read-more {
         visibility: unset;
+        margin-top: auto;
+        display: flex;
+        justify-content: left;
+        gap: 0.5em;
     }
     
     /*Takes up the space between read more and tech icons*/
@@ -296,7 +300,7 @@ h3.super-large {
 
 
 .project {
-    height: 700px; 
+    /* height: 700px;  */
     padding: 1.4em;
     background-color: rgb(47, 47, 54);
     background-color: rgb(45, 44, 49);
@@ -307,7 +311,8 @@ h3.super-large {
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
     /* justify-content: unset; */
-}
+    max-height: fit-content;
+    }
 .project {
     flex: 1 1 calc((100% / 2) - 1.5em); /* grow and shrink, at least 2 per row */
     /* aspect-ratio: 1 / 1; */         /* makes it a square */
@@ -760,7 +765,7 @@ html body header {
 @media (max-width: 1600px) {
 
     .project {
-        height: 700px; 
+        /* height: 700px;  */
 
         padding: 1.4em;
         background-color: rgb(47, 47, 54);
@@ -879,7 +884,7 @@ html body header {
         margin-top: 20px;
     }
     .project{
-        max-width: fit-content;
+        /* max-width: fit-content; */
     }
     #about {
         padding-top: 10px;
@@ -1015,7 +1020,7 @@ html body header {
         margin-top: 10px;
     }
     .project{
-        max-width: fit-content;
+        /* max-width: fit-content; */
     }
     #about {
         padding-top: 10px;
