@@ -681,7 +681,7 @@ html body header {
     .project {
         flex: 0 0 500px;
         flex: 0 0 450px;
-        height: 575px;
+        /* height: 575px; */
         padding: 1.8em;
         background-color: rgb(47, 47, 54);
         background-color: rgb(45, 44, 49);;
@@ -822,7 +822,7 @@ html body header {
 @media (max-width: 1200px) {
     .project {
         flex: 0 0 425px;
-        height: 650px;
+        /* height: 650px; */
         padding: 1.4em;
         background-color: rgb(47, 47, 54);
         background-color: rgb(45, 44, 49);;
@@ -1480,7 +1480,7 @@ h3.super-large {
     max-height: fit-content;
     }
 .project {
-    flex: 1 1 calc((100% / 2) - 1.5em); /* grow and shrink, at least 2 per row */
+    flex: 1 1 calc((100% / 3) - 1.5em); /* grow and shrink, at least 2 per row */
     /* aspect-ratio: 1 / 1; */         /* makes it a square */
     background-color: rgb(58, 56, 63);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
@@ -2077,7 +2077,7 @@ html body header {
 /* ---------- Responsive ---------- */
 @media (max-width: 1200px) {
     .project {
-        height: 700px; 
+        /* height: 700px;  */
 
         padding: 1.4em;
         background-color: rgb(47, 47, 54);
@@ -2253,13 +2253,13 @@ html body header {
     }
 
     .project {
-        height: 700px; 
+        /* height: 700px;  */
         aspect-ratio: unset;
         display: unset;
     }
 
     .project {
-        height: 700px; 
+        /* height: 700px;  */
         flex: unset;   /* width stays fixed */
         padding: 1.2em;
         height: auto;
