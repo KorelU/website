@@ -229,7 +229,7 @@ h3.super-large {
 
 .project {
     flex: 0 0 600px;
-    height: 800px;
+    /* height: 800px; */
     padding: 1.4em;
     background-color: rgb(47, 47, 54);
     background-color: rgb(45, 44, 49);;
@@ -448,7 +448,7 @@ box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .project .tech-icons {
-    margin-top: auto;
+    /* margin-top: auto; */
     display: flex;
     justify-content: right;
     gap: 0.5em;
@@ -1018,6 +1018,1287 @@ html body header {
         font-weight: 700;
         color: #c9b49e;
         text-decoration: underline; /* Adds an underline to the h2 */
+    }
+    h3 {
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    h4 {
+        font-size: 1.0em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    .left-align {
+        font-size: 1em;
+        text-align: left;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+    .right-align {
+        font-size: 0.7em;
+    }
+    section{
+        margin: 1em auto;
+        padding: 1em;
+    }
+    #about {
+        margin: 1em auto;
+        padding: 0.5em;
+    }
+    nav{
+        margin-bottom: 0.5em;
+    }
+    .about-line{
+        gap: 10px
+    }
+    .social-icons a {
+        margin: 0 0.6em;
+        font-size: 1.2em;
+        color: #ffffff;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+
+    nav a {
+        margin: 0 0.25em;
+        font-size: 0.5em;
+        text-decoration: underline; /* Adds an underline to all links */
+        color:#c9b49e;
+    }
+    header{
+        padding: 1.5em 1em 0.5em 1em;
+        padding: 4px;
+        gap: 0.1px;
+    }
+    #intro .right img.profile-image {
+        width: 110px;          /* Set the size of the image */
+        height: 110px;         /* Set the height equal to the width to make it a perfect circle */
+        border-radius: 50%;    /* This makes the image a circle */
+        object-fit: cover;     /* Ensures the image covers the area without distortion */
+        border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
+        margin-top: 15px;
+    }
+    .project{
+        max-width: unset;
+    }
+    #about {
+        padding-top: 10px;
+    }
+
+    .contact-container {
+        display: flex; /* Use flexbox for stacking */
+        flex-direction: column; /* Stack items vertically */
+        align-items: left; /* Center items horizontally */
+        width: 100%; /* Ensure it takes full width */
+    }
+    
+    #contact-me {
+        background-color: inherit;
+        /*background-color: rgb(45, 44, 49);*/
+        padding-top: 0;
+        height: 200px;
+        margin: 2em auto
+
+    }
+
+    /* Paragraphs & links */
+    p {
+        font-family: 'Montserrat', sans-serif; /* Clean sans-serif for paragraphs */
+        font-size: 0.8em;
+        line-height: 1.7;
+    }
+
+
+    .projects-container {
+        display: flex;
+        flex-direction: column; /*  stack items vertically */
+        gap: 1.5em;
+        overflow-y: auto;       /* vertical scrolling instead of horizontal */
+        padding: 1em 0;
+    }
+
+    /* Hide description initially */
+    .description {
+        max-height: 0;         /* completely hidden */
+        overflow: hidden;      /* prevent content from showing */
+        display: none; /* fully remove from layout */
+    }
+
+    /* When the project has the "expanded" class, show description */
+    .project.expanded .description {
+    max-height: 10000px; /* large enough to fit the content */
+    }
+
+    /* Style the Read more button */
+    .read-more {
+        margin-top: 1.5em;          /* distance from chart title */
+        margin-bottom: 1em;       
+        padding: 0;
+        background: none;
+        border: none;
+        color: #c9b49e;
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-align: left;           /* left justify */
+        display: inline-flex;       /* allow arrow to rotate inline */
+        align-items: center;        /* vertical alignment */
+        gap: 0.3em;                 /* space between text and arrow */
+        font-family: 'Merriweather', serif;
+    }
+
+    .read-more .arrow {
+        display: inline-block;
+        transition: transform 0.3s ease; /* smooth rotation */
+    }
+
+    /* rotate arrow when expanded */
+    .project.expanded .read-more .arrow {
+        transform: rotate(180deg); /* flips the arrow */
+        display: block; /* show content */
+    }
+
+
+
+}
+
+
+
+    button.read-more {
+        visibility: unset;
+        margin-top: auto;
+        display: flex;
+        justify-content: left;
+        gap: 0.5em;
+    }
+    
+    /*Takes up the space between read more and tech icons*/
+    .project .description {
+        margin-top: 0em;
+        line-height: 1.8;
+        margin-bottom: 0em;
+    }
+
+    
+    /* Hide description initially */
+    .description {
+        max-height: 0;         /* completely hidden */
+        overflow: hidden;      /* prevent content from showing */
+        display: none; /* fully remove from layout */
+    }
+
+    /* When the project has the "expanded" class, show description */
+    .project.expanded .description {
+    max-height: 10000px; /* large enough to fit the content */
+    }
+
+    /* Style the Read more button */
+    .read-more {
+        padding: 0;
+        background: none;
+        border: none;
+        color: #c9b49e;
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-align: left;           /* left justify */
+        display: inline-flex;       /* allow arrow to rotate inline */
+        align-items: center;        /* vertical alignment */
+        gap: 0.3em;                 /* space between text and arrow */
+        font-family: 'Merriweather', serif;
+        margin-top: 1em;
+        /* margin-top: auto; */
+    }
+
+    .read-more .arrow {
+        display: inline-block;
+        transition: transform 0.3s ease; /* smooth rotation */
+    }
+
+    /* rotate arrow when expanded */
+    .project.expanded .read-more .arrow {
+        transform: rotate(180deg); /* flips the arrow */
+        display: block; /* show content */
+    }
+
+
+
+.code-section {
+margin: 1em;
+max-width: 100%;
+background-color: rgb(45, 44, 49);
+  box-sizing: border-box;;
+padding: 1.25em;
+}
+
+/*Change this if you want to change notes section card size*/
+/* .notes-card.left {
+    flex: 1 1 40%;
+    max-width: 700px;
+    max-height: 1000px;
+} */
+
+.code-section h3 {
+    font-size: 1.0em;
+margin-bottom: 10px;
+}
+
+.code-section pre {
+background: #1e1e1e;          /* Dark background */
+color: #e6e6e6;               /* Light text */
+  width: 100%;
+  box-sizing: border-box; /* IMPORTANT */
+padding: 0 15px;
+border-radius: 10px;
+overflow-x: auto;             /* Scroll if code is wide */
+font-size: 14px;
+line-height: 1.6;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex: 1;
+
+}
+
+@media (max-width: 1600px) {
+    .code-section code {
+        font-size:0.9em ;
+    }
+    .code-section pre{
+        padding: 10px;
+    }
+    .code-section {
+        padding: 1em;
+    }
+    button.read-more {
+        visibility: unset;
+        margin-top: auto;
+        display: flex;
+        justify-content: left;
+        gap: 0.5em;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    .code-section code {
+        font-size:0.7em ;
+    }
+    .code-section pre{
+        padding: 9px;
+    }
+    .code-section {
+        padding: 1em;
+    }
+    button.read-more {
+        visibility: unset;
+        margin-top: auto;
+        display: flex;
+        justify-content: left;
+        gap: 0.5em;
+    }
+}
+
+@media (max-width: 1200px) {
+    .code-section code {
+        font-size:0.7em ;
+    }
+    .code-section pre{
+        padding: 9px;
+    }
+    .code-section {
+        margin-left: 0em;
+        margin-right: 0em;
+        padding: 1em;
+    }
+}
+
+.code-section code {
+font-family: "Courier New", monospace;
+color: white;               /* Light text */
+}
+
+#notes {
+    background-color: rgb(45, 44, 49);
+}
+
+.notes-card {
+    flex: 1 1 40%;
+    padding: 1.1em;
+    background-color: rgb(45, 44, 49);
+    background-color:rgb(58, 56, 63);;
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+    box-sizing: 0;
+}
+
+.notes-card h3 {
+    margin-bottom: 0.5em;
+}
+
+.notes-card h4 {
+    font-weight: 400;
+    margin-bottom: 0.8em;
+}
+
+.notes-card p {
+    flex-grow: 0;
+}
+
+.notes-card .tech-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25em;
+    align-items: center;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.notes-card .tech-icons i:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+/* Underlines links in descrption paragrpahs*/
+.description a {
+    font-weight: normal;
+    /* color: #55a7fe; */
+    color: #9eccfc;              /* text stays normal */
+    text-decoration: underline;
+    /* text-decoration-color: #4da3ff;  underline only */
+}
+
+.description a:hover {
+    text-decoration-thickness: 2px;
+    color: #7db9f9;
+
+}
+ 
+ /* Style the Read more button */
+/* button.read-more {
+    visibility: hidden;
+} */
+
+.scroll-hint {
+    display: none;
+}
+
+#socials{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: inherit;
+}
+
+/* Container to center the link */
+.github-link-container {
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* Styled GitHub button */
+.github-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: rgb(45, 44, 49);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.github-link:hover {
+    background-color: #444;
+}
+
+#intro { 
+    display: flex;             /* Enable flexbox */
+    justify-content: space-between;  /* Space out the left and right sections */
+    padding: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: inherit;
+    color: white;             /* White text */
+    display: flex;             /* Enable flexbox */
+    flex-direction: row;       /* Ensure the layout is horizontal (rows) */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+#about { 
+    background-color: inherit;
+    line-height: 1.5;
+}
+
+/* Projects */
+#open-source-projects {
+    background-color: rgb(45, 44, 49);
+    text-align: left;  /* Left-align the text inside the container */
+ 
+}
+/* Super large text class */
+.super-large {
+    font-weight: bold;  /* Bold the super large text */
+    letter-spacing: 0.05em;  /* Optional: Space the letters out a bit for extra effect */
+    line-height: 1.4;
+    text-transform: uppercase;  /* Optional: Make the text uppercase */
+    margin: 0;  /* Remove any margin */
+}
+
+/* Font size scaling based on h1, h2, and h3 default sizes */
+h1.super-large {
+    font-size: 8rem;  /* Scalable based on viewport width */
+}
+
+h2.super-large {
+    font-size: 6rem;  /* Slightly smaller than h1 */
+}
+
+h3.super-large {
+    margin-top: 5px;
+    font-size: 1.5rem;  /* Even smaller for h3 */
+}
+
+
+
+.project {
+    min-height: 780px; 
+    padding: 1.4em;
+    background-color: rgb(47, 47, 54);
+    background-color: rgb(45, 44, 49);
+    background-color: rgb(50, 50, 59);
+    background-color:rgb(58, 56, 63);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+    /* justify-content: unset; */
+    max-height: fit-content;
+    }
+.project {
+    flex: 1 1 calc((100% / 2) - 1.5em); /* grow and shrink, at least 2 per row */
+    /* aspect-ratio: 1 / 1; */         /* makes it a square */
+    background-color: rgb(58, 56, 63);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+#volunteering {
+    background-color: rgb(45, 44, 49);
+}
+.volunteer-card {
+    flex: 0 0 1300px;
+    padding: 1.4em;
+    background-color: rgb(45, 44, 49);
+    background-color:rgb(58, 56, 63);;
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+}
+
+#contact-me {
+    background-color: inherit;
+    /*background-color: rgb(45, 44, 49);*/
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+    height: 200px;
+
+}
+
+
+/* ---------- Base Styles ---------- */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Consistent body font */
+    background-color:rgb(58, 56, 63);;
+    color: #ffffff;
+    
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif; /* Uniform serif font for headings */
+    margin: 0;
+}
+
+/* Headings */
+h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #c9b49e;
+    text-decoration: underline; /* Adds an underline to the h2 */
+    padding-top: auto;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+h4 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Paragraphs & links */
+p {
+    font-family: 'Montserrat', sans-serif; /* Clean sans-serif for paragraphs */
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* ---------- Header ---------- */
+header {
+     position: sticky;
+      top: 0;                  /* distance from the top of viewport */
+      z-index: 1000;
+    background-color: rgb(207, 181, 156);
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(45, 44, 49);
+    padding: 1.5em 1em 0.5em 1em;
+    text-align: center;
+    color: #c9b49e;
+        color: white;
+
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif; /* Ensures consistency in header */
+}
+
+header h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+nav {
+    /*margin-top: 1.5em;*/
+    margin-bottom: 1.0em;
+}
+
+nav a {
+    margin: 0 1.5em;
+    font-size: 1.2em;
+    text-decoration: underline; /* Adds an underline to all links */
+    color:#c9b49e;
+
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 0em;
+}
+
+.social-icons a {
+    margin: 0 0.6em;
+    font-size: 1.6em;
+    color: #ffffff;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #fcfbfa;
+    transform: translateY(-3px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- Sections ---------- */
+section {
+    max-width: 75%;
+    margin: 4em auto;  /* Center the section horizontally */
+    padding: 2em;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center columns horizontally */
+    text-align: left;
+    align-items: flex-start;  /* Align items at the top (you can change to center if needed) */
+    border-radius: 0px;
+    transition: background-color 0.5s ease;  /* Smooth transition for background color */
+}
+
+
+.left, .right { 
+    flex: 1 1 0%;
+    font-family: 'Merriweather', serif; /* Distinct font for section content */
+}
+
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;       /* <-- THIS makes boxes wrap to next row */
+    gap: 1.5em;
+    padding: 1em 0;
+    overflow-x: hidden;    /* optional, hides horizontal scroll */
+}
+
+
+
+.project:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.project h3 {
+    margin-bottom: 0.5em;
+}
+
+.project h4 {
+    font-weight: 400;
+}
+
+.project p:first-of-type {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.project p {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    line-height: 1.7;
+    font-weight: normal;
+    margin-bottom: 0.75em;
+}
+
+.project .tech-icons {
+    /* margin-top: auto; */
+    display: flex;
+    justify-content: right;
+    gap: 0.5em;
+}
+
+.tech-icons {
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    /* gap: 0.25em; */
+    align-items: center;
+}
+
+.tech-logo {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+}
+
+.tech-logo:hover {
+    transform: scale(1.15);
+}
+
+/* Volunteering Cards */
+
+.volunteer-card:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.volunteer-card h3 {
+    margin-bottom: 0.5em;
+}
+
+.volunteer-card h4 {
+    font-weight: 400;
+    margin-bottom: 0.8em;
+}
+
+.volunteer-card p {
+    flex-grow: 1;
+}
+
+.volunteer-card .tech-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25em;
+    align-items: center;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.volunteer-card .tech-icons i:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* ---------- Footer ---------- */
+footer {
+
+    background-color: rgb(45, 44, 49);
+    color: #c9b49e;
+    color: white;
+    text-align: right;
+    padding: 0.1em 1em;
+}
+
+
+/* ----------- About Section ----------- */
+
+
+#about .left-align {
+    flex: 5;
+    text-align: left;
+}
+
+#about .right {
+    flex: 1;
+    text-align: right;
+}
+
+#intro .left-align {
+    flex: 5;
+    text-align: left;
+}
+
+#intro .right {
+    flex: 1;
+    text-align: right;
+}
+
+.about-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.4em;
+        color: white;
+
+}
+
+.highlight{
+    color:#c9b49e
+}
+
+.about-line-description {
+    display: flex;
+    align-items: left;
+    padding-bottom: 1.3em;
+}
+
+.left-align {
+    font-size: 1.8em;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+.right-align {
+    font-size: 1.4em;
+    text-align: right;
+    font-style: italic;
+}
+
+
+#intro .right img.profile-image {
+    /*width: 100%;
+    max-width: 275px;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;*/
+    width: 325px;          /* Set the size of the image */
+    height: 325px;         /* Set the height equal to the width to make it a perfect circle */
+    border-radius: 50%;    /* This makes the image a circle */
+    object-fit: cover;     /* Ensures the image covers the area without distortion */
+    border: 5px solid #c9b49e; /* Optional: adds a white border around the circle */
+    margin-top: 40px;
+}
+
+#about .right img.profile-image {
+    /*width: 100%;
+    max-width: 275px;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;*/
+    width: 300px;          /* Set the size of the image */
+    height: 300px;         /* Set the height equal to the width to make it a perfect circle */
+    border-radius: 50%;    /* This makes the image a circle */
+    object-fit: cover;     /* Ensures the image covers the area without distortion */
+    border: 5px solid white; /* Optional: adds a white border around the circle */
+    margin-top: 100px;
+}
+
+.project .chart-title {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: block;   /* Changed from inline-block to block for wrapping */
+    width: 100%;      /* Ensure the width is 100% of its container */
+    max-width: 100%;  /* Keep the max width at 100% */
+    height: auto;
+    line-height: 1.2; /* Adjusted line-height for better readability */
+    word-wrap: break-word; /* Ensure long words wrap */
+    white-space: normal;   /* Allow wrapping */
+    font-size: 0.8em;  /* Make text smaller (adjust as needed) */
+    font-weight: bold; /* Make the text bold */
+    padding-bottom: 2em;
+}
+/* 
+.project .description {
+    margin-top: 1em;
+    line-height: 1.8;
+    margin-bottom: 2.0em;
+} */
+
+
+.section-title {
+    margin-bottom: 1em; /* Space below the title */
+}
+
+.contact-container {
+    display: flex; /* Use flexbox for stacking */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items horizontally */
+    width: 100%; /* Ensure it takes full width */
+    margin-top: 20px;
+}
+
+.contact-card {
+    text-align: left;
+    width: 100%;
+}
+
+.contact-info a {
+    color: #6650b4; /* Lighter brown for links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html body header {
+        display: grid;              /* Use flexbox */
+        justify-content: center;    /* Center the links horizontally */
+        gap: 2em;                   /* Space between links */
+        flex-wrap: wrap;            /* Allow wrapping if screen is small */
+        margin-bottom: 1em;
+}
+
+#about h2{
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+#contact-me h2{
+    margin-bottom: 40px;
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1600px) {
+
+    .project {
+        /* height: 700px;  */
+
+        padding: 1.4em;
+        background-color: rgb(47, 47, 54);
+        background-color: rgb(45, 44, 49);
+        background-color: rgb(50, 50, 59);
+        background-color:rgb(58, 56, 63);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        overflow-y: unset;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+    }
+    button.read-more {
+        visibility: unset;
+        margin-top: auto;
+        display: flex;
+        justify-content: left;
+        gap: 0.5em;
+    }
+/*     
+    .project .description {
+        margin-top: 1em;
+        line-height: 2;
+        margin-bottom: 2.0em;
+    } */
+
+    p {
+        line-height: 2;
+    }
+
+
+    section {
+        max-width: 80%;
+    }
+    body{
+        height: 100%; 
+    }
+    
+    #about h2{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* Font size scaling based on h1, h2, and h3 default sizes */
+    h1.super-large {
+        font-size: 6rem;  /* Scalable based on viewport width */
+    }
+     h3.super-large {
+        font-size: 1.0rem;  /* Scalable based on viewport width */
+    }
+    h2 {
+        font-size: 2.25em;
+        font-weight: 700;
+        color: #c9b49e;
+        text-decoration: underline; /* Adds an underline to the h2 */
+    }
+    h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    h4 {
+        font-size: 1.3em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    .left-align {
+        font-size: 1.5em;
+        text-align: left;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+    .right-align {
+        font-size: 1em;
+    }
+    section{
+        margin: 3em auto;
+        padding: 2em;
+    }
+    #about {
+        margin: 1em auto;
+        padding: 0.5em;
+    }
+    nav{
+        margin-bottom: 0.5em;
+    }
+    .about-line{
+        gap: 10px
+    }
+
+    .social-icons a {
+        margin: 0 0.6em;
+        font-size: 1.2em;
+        color: #ffffff;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+
+    nav a {
+        margin: 0 0.5em;
+        font-size: 1em;
+        text-decoration: underline; /* Adds an underline to all links */
+        color:#c9b49e;
+    }
+    header{
+        padding: 1.5em 1em 0.5em 1em;
+        padding: 15px;
+        gap: 0.1px;
+    }
+    #intro .right img.profile-image {
+        width: 250px;          /* Set the size of the image */
+        height: 250px;         /* Set the height equal to the width to make it a perfect circle */
+        border-radius: 50%;    /* This makes the image a circle */
+        object-fit: cover;     /* Ensures the image covers the area without distortion */
+        border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
+        margin-top: 20px;
+    }
+    .project{
+        /* max-width: fit-content; */
+    }
+    #about {
+        padding-top: 10px;
+    }
+
+    .contact-container {
+        display: flex; /* Use flexbox for stacking */
+        flex-direction: column; /* Stack items vertically */
+        align-items: left; /* Center items horizontally */
+        width: 100%; /* Ensure it takes full width */
+    }
+    
+    #contact-me {
+        background-color: inherit;
+        /*background-color: rgb(45, 44, 49);*/
+        padding-top: 0;
+        height: 200px;
+        margin: 2em auto;
+
+    }
+
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+    .project {
+        height: 700px; 
+
+        padding: 1.4em;
+        background-color: rgb(47, 47, 54);
+        background-color: rgb(45, 44, 49);;
+            background-color: rgb(50, 50, 59);
+        background-color:rgb(58, 56, 63);;
+
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for move and shadow */
+    }
+    button.read-more {
+        visibility: unset;
+        margin-top: auto;
+        display: flex;
+        justify-content: left;
+        gap: 0.5em;
+    }
+
+    section {
+        max-width: 80%;
+    }
+    body{
+        height: 100%; 
+    }
+    
+    #about h2{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* Font size scaling based on h1, h2, and h3 default sizes */
+    h1.super-large {
+        font-size: 3.5rem;  /* Scalable based on viewport width */
+    }
+     h3.super-large {
+        font-size: 1rem;  /* Scalable based on viewport width */
+    }
+    h2 {
+        font-size: 2.25em;
+        font-weight: 700;
+        color: #c9b49e;
+        text-decoration: underline; /* Adds an underline to the h2 */
+    }
+    h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    h4 {
+        font-size: 1.3em;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    .left-align {
+        font-size: 1.5em;
+        text-align: left;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+    }
+    .right-align {
+        font-size: 1em;
+    }
+    section{
+        margin: 2em auto;
+        padding: 2em;
+    }
+    #about {
+        margin: 1em auto;
+        padding: 0.5em;
+    }
+    nav{
+        margin-bottom: 0.5em;
+    }
+    .about-line{
+        gap: 10px
+    }
+
+    .social-icons a {
+        margin: 0 0.6em;
+        font-size: 1.2em;
+        color: #ffffff;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+
+    nav a {
+        margin: 0 0.25em;
+        font-size: 1em;
+        text-decoration: underline; /* Adds an underline to all links */
+        color:#c9b49e;
+    }
+    header{
+        padding: 1.5em 1em 0.5em 1em;
+        padding: 15px;
+        gap: 0.1px;
+    }
+    #intro .right img.profile-image {
+        width: 175px;          /* Set the size of the image */
+        height: 175px;         /* Set the height equal to the width to make it a perfect circle */
+        border-radius: 50%;    /* This makes the image a circle */
+        object-fit: cover;     /* Ensures the image covers the area without distortion */
+        border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
+        margin-top: 10px;
+    }
+    .project{
+        /* max-width: fit-content; */
+    }
+    #about {
+        padding-top: 10px;
+    }
+
+    .contact-container {
+        display: flex; /* Use flexbox for stacking */
+        flex-direction: column; /* Stack items vertically */
+        align-items: left; /* Center items horizontally */
+        width: 100%; /* Ensure it takes full width */
+    }
+    
+    #contact-me {
+        background-color: inherit;
+        /*background-color: rgb(45, 44, 49);*/
+        padding-top: 0;
+        height: 200px;
+        margin: 2em auto;
+
+    }
+
+}
+    
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+    .project {
+        min-height: unset;
+        max-height: fit-content;
+    }
+    footer{
+            font-size: 0.8em;
+    }
+    button.read-more {
+        visibility: unset;
+        margin-top: auto;
+        display: flex;
+        justify-content: left;
+        gap: 0.5em;
+    }
+    button.read-more {
+        visibility: unset;
+    }
+    /*Takes up the space between read more and tech icons*/
+    .project .description {
+        margin-top: 0em;
+        line-height: 1.8;
+        margin-bottom: 0em;
+    }
+
+    .project .chart-title {
+        text-align: center;
+        margin-bottom: 1.1em;
+        padding: 0;
+        display: block;   /* Changed from inline-block to block for wrapping */
+        width: 100%;      /* Ensure the width is 100% of its container */
+        max-width: 100%;  /* Keep the max width at 100% */
+        height: auto;
+        line-height: 1.2; /* Adjusted line-height for better readability */
+        word-wrap: break-word; /* Ensure long words wrap */
+        white-space: normal;   /* Allow wrapping */
+        font-size: 0.8em;  /* Make text smaller (adjust as needed) */
+        font-weight: bold; /* Make the text bold */
+    }
+
+    .project {
+        height: 700px; 
+        aspect-ratio: unset;
+        display: unset;
+    }
+
+    .project {
+        height: 700px; 
+        flex: unset;   /* width stays fixed */
+        padding: 1.2em;
+        height: auto;
+        background-color: rgb(58, 56, 63);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    #intro{
+        margin-left: 0 auto;
+        margin-right: 0  auto;
+    }
+
+    section {
+        max-width: 93%;
+    }
+    body{
+        height: 100%; 
+    }
+    
+    #about h2{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    /* Font size scaling based on h1, h2, and h3 default sizes */
+    h1.super-large {
+        font-size: 2.25rem;  /* Scalable based on viewport width */
+    }
+     h3.super-large {
+        font-size: 0.75rem;  /* Scalable based on viewport width */
+    }
+    h2 {
+        font-size: 1.4em;
+        font-weight: 700;
+        color: #c9b49e;
+        text-decoration: underline; /* Adds an underline to the h2 */
+        padding-bottom: 0px;
     }
     h3 {
         font-size: 1.2em;
