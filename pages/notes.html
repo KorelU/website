@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Merriweather:wght@400;700&amp;family=Playfair+Display:wght@400;700&amp;family=Montserrat:wght@400;700&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- ================== Header ================== -->
+    <header>
+        <!-- Navigation -->
+        <nav >
+            <a href="../index.html">Home</a>
+            <a href="../index.html#open-source-projects">Open Source Projects</a>
+            <a href="../index.html#volunteering">Volunteering & Community Work</a>
+            <a href="../index.html#notes">Notes</a>
+            <a href="../index.html#contact-me">Contact Me</a>
+            <!-- Social Icons -->
+        </nav>
+    </header>
+
+<!-- ================== Notes ================== -->
+<section id="notes">
+    <div class="left">
+        <h2>Notes</h2>
+    </div>
+
+    <div class="left">
+        <h4 style="padding: 0.5em;">This section simplifies complex concepts I encountered while building my projects, making them easier to reference for both myself and others intrested in something similair.</h4>
+    </div>
+
+    <div class="notes-container">
+        <!-- Notes Card 1 -->
+        <div class="notes" style="position: relative;">
+                <h3>Understanding Regular Expressions (Regex)</h3>
+            <h4>Patterns, Syntax, and How Regex Works</h4>
+
+            <p class="description">
+                
+                Regular expressions (regex) are patterns used to search, match, and manipulate text.
+                They allow you to describe rules for text in a concise way, making them useful for tasks
+                like validating input, searching logs, extracting data, or performing find-and-replace operations.
+                <br>
+                <br>
+
+                <strong>Using Regex in Python:</strong> Python provides the "re" module for working with regex.  
+                <br>
+                <br>
+                
+                &nbsp;&nbsp;<span style="color:#569cd6; font-weight:bold;">import</span> re<br>
+                <br>
+                &nbsp;&nbsp;<span style="color:#9cdcfe;">pattern</span> = <span style="color:#ce9178;">r"\d+"</span><br>
+                &nbsp;&nbsp;<span style="color:#9cdcfe;">text</span> = <span style="color:#ce9178;">"There are 24 apples"</span><br>
+                &nbsp;&nbsp;<span style="color:#9cdcfe;">match</span> = re.search(<span style="color:#9cdcfe;">pattern</span>, <span style="color:#9cdcfe;">text</span>)<br>
+                &nbsp;&nbsp;<span style="color:#569cd6; font-weight:bold;">if</span> <span style="color:#9cdcfe;">match</span>:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(<span style="color:#ce9178;">"Found:"</span>, <span style="color:#9cdcfe;">match</span>.group())
+                
+                <br>
+                <br>
+                <br>
+
+                For hands-on practice, I highly recommend the interactive exercises on <a href="https://www.regexone.com/problem/matching_decimal_numbers" target="_blank"> RegexOne</a>.
+                They provide clear explanations and progressively challenging problems to make learning regex easier.
+            </p>
+            
+            <button class="read-more" style="margin-top: 1em;">
+                See details <span class="arrow">▼</span>
+            </button>
+    
+
+            <div class="tech-icons" style="margin-top: auto;">
+                <a href="https://www.regexone.com/" target="_blank" rel="noopener noreferrer" title="Learn Regex">
+                    <i class="fas fa-code"></i> <!-- represents coding / regex -->
+                </a>
+            </div>
+        </div>
+        <!-- Notes Card 2 -->
+        <div class="notes">
+            <h3>CPU Boot Process &amp; Execution</h3>
+            <h4>How the CPU Starts, Loads the OS, and Runs Code</h4>
+            <p class="description">
+                Understanding how and where the CPU begins is crucial for low-level programming and OS design. The following is a simple
+                breakdown of that process.
+                <br>
+                <br>
+                <strong>Step 1 - CPU Startup:</strong> When powered on, a CPU (Intel, AMD, etc.) immediately begins executing
+                instructions at a fixed reset vector (e.g., <code>0xFFFF0</code>).
+                <br>
+                <br>
+                <strong>Step 2 - Firmware Mapping:</strong> BIOS/UEFI manufacturers (AMI, Phoenix, etc.) write firmware that lives in
+                read-only memory (ROM/flash). Motherboard manufacturers wire the hardware so that this firmware is mapped to the
+                CPU's reset vector. This electrical mapping is what makes the firmware appear exactly where the CPU expects it
+                when the system powers on.
+                <br>
+                <br>
+                <strong>Step 3 - Hardware Initialization and Bootloader:</strong> Once running, the BIOS/UEFI firmware performs POST (Power-On Self-Test),
+                verifying that the CPU, RAM, storage devices, and essential motherboard components are present and functioning
+                correctly before searching for a bootable device.
+                <br>
+                <br>
+                <strong>Step 5 - Kernel Handoff:</strong> When found he bootloader loads the operating system kernel into RAM and jumps to its
+                entry point. At this moment, control transfers from firmware to the operating system, and the CPU begins executing
+                kernel code.
+            </p>   
+            <button class="read-more" style="margin-top: 1em;">
+                See details <span class="arrow">▼</span>
+            </button>    
+            <div class="tech-icons" style="margin-top: auto;">
+                <a href="https://xinu.cs.purdue.edu/" target="_blank" rel="noopener noreferrer" title="Learn XINU">
+                    <i class="fas fa-book-open"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Notes Card 3 -->
+        <div class="notes" style="position: relative;">
+            <h3>NAS vs SAN</h3>
+            <h4>Understanding Storage Architectures and Their Use Cases</h4>
+
+            <p class="description">
+                In modern IT environments, storage solutions are critical for data access, performance, and management. 
+                Two common architectures are <strong>Network Attached Storage (NAS)</strong> and <strong>Storage Area Network (SAN)</strong>.  
+                While both provide centralized storage, they differ in how they serve data and how clients interact with it.
+                <br><br>
+
+                <strong>Network Attached Storage (NAS):</strong><br>
+                NAS is designed for <strong>file-level access</strong>. It serves files over a network to multiple users and devices.  
+                It is ideal for <strong>shared file storage</strong>, backups, and collaborative environments.  
+                NAS commonly uses <strong>NFS (Network File System)</strong>, originally developed by Sun Microsystems, to allow clients to access files over the network.
+                <br><br>
+
+                <strong>Storage Area Network (SAN):</strong><br>
+                SAN works at the block level, providing clients with virtual disks called <strong>LUNs (Logical Unit Numbers)</strong>.  
+                Each LUN defines a virtual partition of a physical disk, giving clients more control over their storage.  
+                SAN is typically used in environments that require high performance and scalable storage for databases, virtualization, and enterprise applications.
+                <br><br>
+
+                <strong>Connectivity Options for SAN:</strong><br>
+                &nbsp;&nbsp;<span style="font-weight:bold;">iSCSI</span> - Transfers block-level data over an existing IP network.  
+                &nbsp;&nbsp;Pros: lower cost, uses existing infrastructure<br>
+                &nbsp;&nbsp;Cons: slower than dedicated channels<br><br>
+                &nbsp;&nbsp;<span style="font-weight:bold;">Fibre Channel</span> - Uses a dedicated network for high-speed block-level transfers.  
+                &nbsp;&nbsp;Pros: high performance, low latency<br>
+                &nbsp;&nbsp;Cons: higher cost, requires specialized hardware
+                <br><br>
+
+                <strong>Quick Comparison:</strong><br>
+                &nbsp;&nbsp;• NAS -> File-level access, simple setup, good for collaboration<br>
+                &nbsp;&nbsp;• SAN -> Block-level access, high performance, suitable for enterprise applications
+                <br><br>
+
+                For deeper learning, check out <a href="https://www.snia.org/initiatives/san" target="_blank">SNIA SAN Resources</a> and <a href="https://www.redhat.com/en/topics/storage/what-is-nas" target="_blank">Red Hat NAS Guide</a>.
+            </p>
+
+            <button class="read-more" style="margin-top: 1em;">
+                See details <span class="arrow">▼</span>
+            </button>
+
+            <div class="tech-icons" style="margin-top: auto;">
+                <a href="https://www.snia.org/initiatives/san" target="_blank" rel="noopener noreferrer" title="Learn SAN/NAS">
+                    <i class="fas fa-hdd"></i> <!-- represents storage / NAS-SAN -->
+                </a>
+            </div>
+        </div>
+    <!-- Notes Card 4 --><!-- Notes Card 3 - Visual Version -->
+    <div class="notes" style="position: relative;">
+        <h3>Leaf-Spine Network Architecture</h3>
+        <h4>High-Performance Data Center Networking Design</h4>
+
+        <p class="description">
+            In modern data centers, the <strong>leaf-spine network architecture</strong> is commonly used to improve performance, scalability, and redundancy.  
+            It handles large amounts of <strong>east-west traffic</strong> efficiently.
+            <br><br>
+
+            <strong>Basic Leaf-Spine Diagram:</strong><br><br>
+            <img src="../photos/leaf-spine.png" 
+                alt="Leaf-Spine Network Diagram" 
+                style="width:100%; max-width:700px; display:block; margin:1em auto;">
+            <br>
+                This shows leaf switches (Top-of-Rack) connecting to all spine switches, creating multiple paths for traffic and redundancy.
+            <br><br>
+
+            <strong>Key Components:</strong><br>
+            &nbsp;&nbsp;<span style="font-weight:bold;">Leaf switches</span> - Top-of-Rack switches connecting servers.<br>
+            &nbsp;&nbsp;<span style="font-weight:bold;">Spine switches</span> - Backbone switches connecting all leaf switches.<br><br>
+
+            <strong>Advantages:</strong><br>
+            - Higher capacity for east-west traffic using multiple paths and ECMP.<br>
+            - Redundant paths for fault tolerance; if one spine fails, traffic reroutes through others.<br><br>
+
+            <strong>Scaling with Super Spine:</strong><br><br>
+            <img src="../photos/leaf-spine-superspine.png" 
+                alt="Leaf-Spine with Super Spine Diagram" 
+                style="width:100%; max-width:700px; display:block; margin:1em auto;">
+            <br>
+                For very large data centers, a <strong>super spine layer</strong> connects multiple spine switches to each pod of leaf switches, allowing tens of thousands of racks to scale efficiently.
+            <br><br>
+
+            For more explanations see <a href="https://learningnetwork.cisco.com/s/question/0D56e0000EBtd2dCQB/a-guide-to-simple-twotier-threetier-and-spineleaf-designs" target="_blank">Cisco Leaf-Spine Guide</a>.
+        </p>
+
+        <button class="read-more" style="margin-top: 1em;">
+            See details <span class="arrow">▼</span>
+        </button>
+
+        <div class="tech-icons" style="margin-top: auto;">
+            <a href="https://www.cisco.com/c/en/us/solutions/data-center-virtualization/leaf-spine-architecture.html" target="_blank" rel="noopener noreferrer" title="Learn Leaf-Spine Architecture">
+                <i class="fas fa-network-wired"></i> <!-- represents networking / leaf-spine -->
+            </a>
+        </div>
+    </div>
+        <!-- Notes Card End -->
+        <div class="notes" style="display: flex;justify-content: center;align-items: center;max-width: unset;max-height: fit-content; min-height: unset; ">
+            <a href="../index.html" style="font-weight: bold; color: #9eccfc;   ; text-decoration: underline; visibility: unset;">
+                Go Home
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2026 Korel Ucpinar</p>
+    </footer>
+
+
+    <script src="../script.js"></script>
+</body>
+</html>
