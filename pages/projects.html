@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styless-projects.css">
+</head>
+<body>
+
+    <!-- ================== Header ================== -->
+    <header>
+        <!-- Navigation -->
+        <nav >
+            <a href="../index.html">Home</a>
+            <a href="../index.html#open-source-projects">Open Source Projects</a>
+            <a href="../index.html#volunteering">Volunteering & Community Work</a>
+            <a href="../index.html#notes">Notes</a>
+            <a href="../index.html#contact-me">Contact Me</a>
+            <!-- Social Icons -->
+        </nav>
+    </header>
+
+<!-- ================== Open Source Projects ================== -->
+<section id="open-source-projects">
+    <div class="left">
+        <h2>Open Source Projects</h2>
+        <h5 class="scroll-hint">Scroll to the right for more</h5>
+    </div>
+
+    <div class="projects-container">
+        <!-- Project Card 1 -->
+            <div class="project" style="position: relative;">
+                <h3>Portable Speaker - 2025</h3>
+                <!-- GitHub Badge Under Title -->
+                <p style="text-align: left; margin: 0.2em 0;">
+                    <a href="https://github.com/KorelU/PortableArduinoSpeaker" target="_blank" title="View GitHub Profile">
+                        <img src="https://img.shields.io/badge/GitHub-Portable Speaker-9C8466?labelColor=232227&logo=github&logoColor=white" 
+                            alt="GitHub Badge" 
+                            style="height: 20px;">
+                    </a>
+                </p>
+                <h4>A simple, battery powered arduino-based speaker. </h4>
+                <img src="../photos/Portable_Arduino_Based_Speaker.png" alt="Portable_Arduino_Based_Speaker" class="project-chart" style="width: 100%; max-width: 500px; margin: 2em auto; display: block">
+                <p class="chart-title ">This diagram is for the circuit network of the portable arduino speaker</p>
+                <!-- description that is hidden initially -->
+                <p class="description">
+                    This Arduino-powered portable speaker is a self-contained, battery-operated audio device designed for 
+                    maximum portability and simplicity. It utilizes the 
+                    <a href="https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299" target="_blank">DFPlayer Mini </a>
+                    to play audio files directly from an SD card,
+                    enabling automatic track looping. Powered by 6 AA-batteries, the speaker is easy to maintain, with quick and 
+                    convenient battery replacement.
+                    <br>
+                    <br>
+                    The concept for this speaker originated from collaborative discussions with Jackson Bowles, Alex Anthony, and Brenden Mahoney 
+                    as a potential startup venture, where the idea evolved through brainstorming and feedback.
+                </p>
+                <button class="read-more">
+                Read more <span class="arrow">▼</span>
+                </button>
+                <div class="tech-icons">
+                <a href="https://www.arduino.cc/" target="_blank" rel="noopener noreferrer" title="Arduino">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"alt="Arduino"class="tech-logo">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/C_(programming_language)"target="_blank"rel="noopener noreferrer"title="C Language">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="tech-logo" style="width: 30px; height: 30px;">
+                </a>
+                </div>
+            </div>
+        <!-- Project Card 2 -->
+        <div class="project">
+            <h3>KDAI - 2025</h3>                
+            <!-- GitHub Badge Under Title -->
+            <p style="text-align: left; margin: 0.2em 0;">
+                <a href="https://github.com/dentproject/kdai" target="_blank" title="View GitHub Profile">
+                    <img src="https://img.shields.io/badge/GitHub-KDAI-9C8466?labelColor=232227&logo=github&logoColor=white" 
+                        alt="GitHub Badge" 
+                        style="height: 20px;">
+                </a>
+            </p>
+            <h4>KDAI (Kernel Dynamic ARP Inspeciton) is a Loadable Kernel Module for Linux systems that enhances network security</h4>
+            <img src="../photos/kdai.png" alt="KDAI" class="project-chart" style="width: 100%; max-width: 500px; margin: 2em auto; display: block; ">
+            <p class="chart-title">Screenshot of GNS3 Simulaiton where multiple PC's in different VLANs are connected to a switch running KDAI</p>
+            <p class="description">
+                <a href="https://en.wikipedia.org/wiki/Address_Resolution_Protocol" target="_blank">The Address Resolution Protocol (ARP) </a>
+                lacks built-in validation, making networks vulnerable to 
+                <a href="https://en.wikipedia.org/wiki/ARP_spoofing" target="_blank">ARP cache poisoning</a> 
+                and enabling man-in-the-middle or denial-of-service attacks. Enterprise-grade switches often offer 
+                <a href="https://www.juniper.net/documentation/us/en/software/junos/security-services/topics/topic-map/understanding-and-using-dai.html" target="_blank">Dynamic ARP Inspection (DAI) </a>
+                as a Layer 2 security feature to mitigate such risks. 
+                However, Linux-based networking environments have lacked an equivalent - until now. 
+                To fill this gap KDAI (Kernel Dynamic ARP Inspection), a Linux kernel module, was developed to implement DAI.
+                <br>
+                <br>
+                KDAI is a Loadable Kernel Module (LKM) for Linux systems that enhances Layer 2 network security by preventing ARP cache poisoning.
+                It operates by intercepting ARP messages traversing a Linux bridge and comparing ARP entries against a trusted database of IP-to-Mac address bindings.
+                This database is built dynamically using 
+                <a href="https://en.wikipedia.org/wiki/DHCP_snooping" target="_blank">DHCP Snooping</a>
+                but may also be populated using static ARP entries.      
+                <br><br>              
+                <b>Key Features:</b><br><br>
+                - <b>ARP Inspection:</b> Logs and drops ARP packets with mismatched IP-to-MAC bindings to prevent ARP spoofing.<br><br>
+                - <b>DHCP Snooping:</b> Builds a dynamic table by monitoring DHCP traffic to ensure valid IP-to-MAC bindings.<br><br>
+                - <b>Static ARP ACLs:</b> Allows manual configuration of trusted IP-to-MAC bindings.<br><br>
+                - <b>Interface Trust:</b> Interfaces can be marked as trusted (bypass checks) or untrusted (ARP inspection required).<br><br>
+                - <b>ARP Rate Limiting:</b> Limits ARP packets to 15 per second on untrusted interfaces to prevent flooding.<br><br>
+                - <b>Per-VLAN Support:</b> Applies rules independently to each VLAN for more granular control.
+            </p>
+            <button class="read-more">
+            Read more <span class="arrow">▼</span>
+            </button>
+            <div class="tech-icons">
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer" title="C Language">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="tech-logo" style="width: 30px; height: 30px;">
+            </a>
+
+            <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" style="width: 40px; height: 40px;">
+            </a>
+
+            <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer" title="Bash">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" class="tech-logo">
+            </a>
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project">
+            <h3>IEEE802.1x Docker Image - 2024</h3>
+            <!-- GitHub Badge Under Title -->
+            <p style="text-align: left; margin: 0.2em 0;">
+                <a href="https://hub.docker.com/r/korelu/ieee802-1x-authenticator-and-server" target="_blank" title="View GitHub Profile">
+                    <img src="https://img.shields.io/badge/Docker-IEEE802.1x Image-9C8466?labelColor=232227&logo=docker&logoColor=white" 
+                        style="height: 20px;">
+                </a>
+            </p>
+            <h4>Custom Docker Image for IEEE 802.1x RADIUS Server & Authenticator</h4>
+            <img src="../photos/DENT_IEEE_802.1x.png" alt="DENT_IEEE_802.1x" class="project-chart" style="width: 100%; max-width: 500px; margin: 2em auto; display: block; ">
+            <p class="chart-title">This diagram shows an 802.1X network setup where a supplicant (client) connects to an access point on an Authenticator (a TN48M Switch), 
+                which forwards authentication requests to a FreeRadius server running in a Docker container</p>
+            <p class="description">
+                This Docker image simplifies the setup of 
+                <a href="https://en.wikipedia.org/wiki/IEEE_802.1X" target="_blank">IEEE 802.1X</a> authentication by containerizing the 
+                <a href="https://en.wikipedia.org/wiki/RADIUS" target="_blank">RADIUS server</a> 
+                and using 
+                <a href="https://wireless.docs.kernel.org/en/latest/en/users/documentation/hostapd.html" target="_blank">hostapd</a> 
+                and 
+                <a href="https://freeradius.org/" target="_blank">FreeRADIUS</a> 
+                to manage network access. When run on a device, the image configures it 
+                as both an Authenticator and an Authentication Server, allowing it to handle incoming EAPOL
+                frames from Supplicants (devices seeking network access).
+                <br><br>
+
+                The device acts as an access point, blocking all non-EAP traffic until the authentication process completes.
+                It forwards EAP messages to the internal RADIUS server for credential validation. Once validated, the RADIUS server
+                sends either an Access-Accept or Access-Reject message, controlling whether the port is opened for normal traffic or
+                kept locked.
+                <br><br>
+
+                This setup lets administrators easily replicate the entire 802.1X handshake-including EAP-Start, identity exchange, 
+                RADIUS challenges, and authorization-without complex configuration. The use of hostapd for access point functionality 
+                and FreeRADIUS for credential checking makes it a powerful, flexible solution for network access control.
+            </p>
+            <button class="read-more">
+            Read more <span class="arrow">▼</span>
+            </button>
+            <div class="tech-icons">
+            <a href="https://wiki.freeradius.org/" target="_blank" rel="noopener noreferrer" title="freeRADIUS">
+                <img src="../photos/freeRadius.png" alt="freeRADIUS" class="tech-logo">
+            </a>
+            <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" title="Docker">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-logo">
+            </a>
+            <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" title="Linux">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="tech-logo">
+            </a>
+            </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project">
+            <h3>DENT Documentation - 2024</h3>
+            <!-- GitHub Badge Under Title -->
+            <p style="text-align: left; margin: 0.2em 0;">
+                <a href="https://docs.dent.dev/" target="_blank" title="View GitHub Profile">
+                    <img src="https://img.shields.io/badge/Documentation-DENT NOS-9C8466?labelColor=232227&logo=readthedocs&logoColor=white" 
+                        style="height: 20px;">
+                </a>
+            </p>
+            <h4>This Project was a step by step guide using GNS3 on how to configure a Linux Based Network Operating System called DENT</h4>
+            <img src="../photos/BGP_Demo.png" alt="BGP_Demo" class="project-chart" style="width: 100%; max-width: 500px; margin: 2em auto; display: block;">
+            <p class="chart-title">
+                This diagram shows a classic instance of a network topology and is part of the how to configure BGP using 
+                Free Range Routing
+            </p>
+            <p class="description">
+                Authored documentation for <strong>DENT</strong>, an open-source Network Operating System,
+                and configured ~30 different networking topologies across the TCP/IP suite of protocols.
+                <br><br>
+                <strong>Below are a few examples I documented and configured:</strong>
+                <br><br>
+                <strong>- Addressing and Filtering:</strong>
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkAddressingAndFilteringSubCategories/DHCP.html" target="_blank">DHCP</a>, 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkAddressingAndFilteringSubCategories/ACL-Support.html" target="_blank">ACLs</a>, and 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkAddressingAndFilteringSubCategories/Stateless-NAT.html#stateless-network-address-translation-nat" target="_blank">NAT</a>.
+                <br><br>
+                <strong>- Discovery and Management:</strong>
+                <a href="https://docs.dent.dev/NetworkConfigurations/RoutingAndForwarding/BGP_BorderGatewayProtocol.html#enable-bgp" target="_blank">BGP</a>, 
+                <a href="https://docs.dent.dev/NetworkConfigurations/RoutingAndForwarding/OSPFv3.html#open-shortest-path-first-version-3-ospfv3" target="_blank">OSPF</a>, 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkDiscoveryAndManagementSubCategories/STP_SpanningTreeProtocol.html" target="_blank">STP</a>, 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkDiscoveryAndManagementSubCategories/LLDP_LinkLayerDiscoveryProtocol.html" target="_blank">LLDP</a>, and 
+                <a href="https://docs.dent.dev/NetworkConfigurations/NetworkDiscoveryAndManagementSubCategories/VRRP_VirtualRouterRedundancyProtocol.html" target="_blank">VRRP</a>.
+                <br><br>
+                <strong>- VLAN Configurations:</strong>
+                <a href="https://docs.dent.dev/NetworkConfigurations/VLANConfigurationSubCategories/BridgingL2.html#bridges" target="_blank">Linux bridges</a>, 
+                <a href="https://docs.dent.dev/NetworkConfigurations/VLANConfigurationSubCategories/VLANsSetUp.html#bridges-and-vlans" target="_blank">VLANs</a>, and 
+                <a href="https://docs.dent.dev/NetworkConfigurations/VLANConfigurationSubCategories/Trunks.html" target="_blank">Trunks</a>
+                <br><br>
+                <strong>- Authentication:</strong>
+                <a href="https://docs.dent.dev/PlatformConfigurations/IEEE802.1xPortBasedAuthentication.html" target="_blank">IEEE 802.1X</a> 
+                with EAP-TLS and EAP-TTLS.
+            </p>
+            <button class="read-more">
+            Read more <span class="arrow">▼</span>
+            </button>
+            <div class="tech-icons">
+                <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer" title="Debian">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" class="tech-logo">
+                </a>
+                <a href="https://dent.dev/" target="_blank" rel="noopener noreferrer" title="DENT">
+                            <img src="../photos/dent-logo.png" alt="DENT_Logo" title="DENT_Logo" style="max-width: 5em; height: auto;">
+                </a>
+            </div>
+        </div>
+        <div class="project" style="display: flex;justify-content: center;align-items: center;max-width: unset;max-height: fit-content; min-height: unset;">
+            <a href="../index.html" 
+            style="font-weight: bold; color: #9eccfc;   ; text-decoration: underline; visibility: unset;">
+                Go Home
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2026 Korel Ucpinar</p>
+    </footer>
+
+
+    <script src="../script.js"></script>
+</body>
+</html>
