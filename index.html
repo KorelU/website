@@ -349,7 +349,8 @@
             <h3>CPU Boot Process &amp; Execution</h3>
             <h4>How the CPU Starts, Loads the OS, and Runs Code</h4>
             <p class="description">
-
+                Understanding how and where the CPU begins is crucial for low-level programming and OS design. The following is a simple
+                breakdown of that process.
                 <br>
                 <br>
                 <strong>Step 1 - CPU Startup:</strong> When powered on, a CPU (Intel, AMD, etc.) immediately begins executing
@@ -386,40 +387,39 @@
             <h4>Understanding Storage Architectures and Their Use Cases</h4>
 
             <p class="description">
-                In modern IT environments, <strong>storage solutions</strong> are critical for data access, performance, and management. 
-                Two common architectures are **Network Attached Storage (NAS)** and **Storage Area Network (SAN)**.  
-                While both provide centralized storage, they differ in **how they serve data** and **how clients interact** with it.
+                In modern IT environments, storage solutions are critical for data access, performance, and management. 
+                Two common architectures are <strong>Network Attached Storage (NAS)</strong> and <strong>Storage Area Network (SAN)</strong>.  
+                While both provide centralized storage, they differ in how they serve data and how clients interact with it.
                 <br><br>
 
                 <strong>Network Attached Storage (NAS):</strong><br>
                 NAS is designed for <strong>file-level access</strong>. It serves files over a network to multiple users and devices.  
-                It is ideal for shared file storage, backups, and collaborative environments.  
+                It is ideal for <strong>shared file storage</strong>, backups, and collaborative environments.  
                 NAS commonly uses <strong>NFS (Network File System)</strong>, originally developed by Sun Microsystems, to allow clients to access files over the network.
                 <br><br>
 
                 <strong>Storage Area Network (SAN):</strong><br>
-                SAN works at the <strong>block level</strong>, providing clients with <strong>virtual disks</strong> called <strong>LUNs (Logical Unit Numbers)</strong>.  
+                SAN works at the block level, providing clients with virtual disks called <strong>LUNs (Logical Unit Numbers)</strong>.  
                 Each LUN defines a virtual partition of a physical disk, giving clients more control over their storage.  
                 SAN is typically used in environments that require high performance and scalable storage for databases, virtualization, and enterprise applications.
                 <br><br>
 
                 <strong>Connectivity Options for SAN:</strong><br>
-                <span style="color:#569cd6; font-weight:bold;">iSCSI</span> – Transfers block-level data over an existing IP network.  
+                &nbsp;&nbsp;<span style="font-weight:bold;">iSCSI</span> - Transfers block-level data over an existing IP network.  
                 <br>
                 &nbsp;&nbsp;Pros: lower cost, uses existing infrastructure
                 <br>
-                &nbsp;&nbsp;Cons: slower than dedicated channels
+                &nbsp;&nbsp;Cons: slower than dedicated channels<br><br>
+                &nbsp;&nbsp;<span style="font-weight:bold;">Fibre Channel</span> - Uses a dedicated network for high-speed block-level transfers.  
                 <br>
+                &nbsp;&nbsp;Pros: high performance, low latency
                 <br>
-                <span style="color:#569cd6; font-weight:bold;">Fibre Channel</span> – Uses a dedicated network for high-speed block-level transfers.  
-                <br>
-                &nbsp;&nbsp;Pros: high performance, low latency<br>
                 &nbsp;&nbsp;Cons: higher cost, requires specialized hardware
                 <br><br>
 
                 <strong>Quick Comparison:</strong><br>
-                &nbsp;&nbsp;• NAS → File-level access, simple setup, good for collaboration<br>
-                &nbsp;&nbsp;• SAN → Block-level access, high performance, suitable for enterprise applications
+                &nbsp;&nbsp;- NAS -> File-level access, simple setup, good for collaboration<br>
+                &nbsp;&nbsp;- SAN -> Block-level access, high performance, suitable for enterprise applications
                 <br><br>
 
                 For deeper learning, check out <a href="https://www.snia.org/initiatives/san" target="_blank">SNIA SAN Resources</a> and <a href="https://www.redhat.com/en/topics/storage/what-is-nas" target="_blank">Red Hat NAS Guide</a>.
@@ -435,24 +435,24 @@
                 </a>
             </div>
         </div>
-        <!-- Project Card 4 -->
+        <!-- Notes Card See All -->
         <div class="notes" style="display: flex;justify-content: center;align-items: center;max-width: unset;max-height: fit-content; min-height: unset; ">
-    <a href="pages/notes.html" 
-       style="
-           font-weight: bold;
-           color: #9eccfc;
-           text-decoration: underline;
-           font-size: 0.9em;
-           margin: 1em;
-           padding: 0.2em 0.5em;
-           border-radius: 4px;
-           background-color: rgba(158, 204, 252, 0.07);
-           transition: all 0.3s ease;
-       "
-       onmouseover="this.style.backgroundColor='rgba(158, 204, 252, 0.12)'; this.style.color='#b8e0fc';"
-       onmouseout="this.style.backgroundColor='rgba(158, 204, 252, 0.05)'; this.style.color='#9eccfc';">
-       See All Notes
-    </a>
+            <a href="pages/notes.html" 
+            style="
+                font-weight: bold;
+                color: #9eccfc;
+                text-decoration: underline;
+                font-size: 0.9em;
+                margin: 1em;
+                padding: 0.2em 0.5em;
+                border-radius: 4px;
+                background-color: rgba(158, 204, 252, 0.07);
+                transition: all 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='rgba(158, 204, 252, 0.12)'; this.style.color='#b8e0fc';"
+            onmouseout="this.style.backgroundColor='rgba(158, 204, 252, 0.05)'; this.style.color='#9eccfc';">
+            See All Notes
+            </a>
         </div>
     </div>
 </section>

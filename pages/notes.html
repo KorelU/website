@@ -75,7 +75,7 @@
             </p>
             
             <button class="read-more" style="margin-top: 1em;">
-                See details <span class="arrow">▼</span>
+                Read more <span class="arrow">▼</span>
             </button>
     
 
@@ -114,7 +114,7 @@
                 kernel code.
             </p>   
             <button class="read-more" style="margin-top: 1em;">
-                See details <span class="arrow">▼</span>
+                Read more <span class="arrow">▼</span>
             </button>    
             <div class="tech-icons" style="margin-top: auto;">
                 <a href="https://xinu.cs.purdue.edu/" target="_blank" rel="noopener noreferrer" title="Learn XINU">
@@ -147,23 +147,27 @@
 
                 <strong>Connectivity Options for SAN:</strong><br>
                 &nbsp;&nbsp;<span style="font-weight:bold;">iSCSI</span> - Transfers block-level data over an existing IP network.  
-                &nbsp;&nbsp;Pros: lower cost, uses existing infrastructure<br>
+                <br>
+                &nbsp;&nbsp;Pros: lower cost, uses existing infrastructure
+                <br>
                 &nbsp;&nbsp;Cons: slower than dedicated channels<br><br>
                 &nbsp;&nbsp;<span style="font-weight:bold;">Fibre Channel</span> - Uses a dedicated network for high-speed block-level transfers.  
-                &nbsp;&nbsp;Pros: high performance, low latency<br>
+                <br>
+                &nbsp;&nbsp;Pros: high performance, low latency
+                <br>
                 &nbsp;&nbsp;Cons: higher cost, requires specialized hardware
                 <br><br>
 
                 <strong>Quick Comparison:</strong><br>
-                &nbsp;&nbsp;• NAS -> File-level access, simple setup, good for collaboration<br>
-                &nbsp;&nbsp;• SAN -> Block-level access, high performance, suitable for enterprise applications
+                &nbsp;&nbsp;- NAS -> File-level access, simple setup, good for collaboration<br>
+                &nbsp;&nbsp;- SAN -> Block-level access, high performance, suitable for enterprise applications
                 <br><br>
 
                 For deeper learning, check out <a href="https://www.snia.org/initiatives/san" target="_blank">SNIA SAN Resources</a> and <a href="https://www.redhat.com/en/topics/storage/what-is-nas" target="_blank">Red Hat NAS Guide</a>.
             </p>
 
             <button class="read-more" style="margin-top: 1em;">
-                See details <span class="arrow">▼</span>
+                Read more <span class="arrow">▼</span>
             </button>
 
             <div class="tech-icons" style="margin-top: auto;">
@@ -172,53 +176,53 @@
                 </a>
             </div>
         </div>
-    <!-- Notes Card 4 --><!-- Notes Card 3 - Visual Version -->
-    <div class="notes" style="position: relative;">
-        <h3>Leaf-Spine Network Architecture</h3>
-        <h4>High-Performance Data Center Networking Design</h4>
+        <!-- Notes Card 4 -->
+        <div class="notes" style="position: relative;">
+            <h3>Leaf-Spine Network Architecture</h3>
+            <h4>High-Performance Data Center Networking Design</h4>
 
-        <p class="description">
-            In modern data centers, the <strong>leaf-spine network architecture</strong> is commonly used to improve performance, scalability, and redundancy.  
-            It handles large amounts of <strong>east-west traffic</strong> efficiently.
-            <br><br>
+            <p class="description">
+                In modern data centers, the <strong>leaf-spine network architecture</strong> is commonly used to improve performance, scalability, and redundancy.  
+                It handles large amounts of <strong>east-west traffic</strong> efficiently.
+                <br><br>
 
-            <strong>Basic Leaf-Spine Diagram:</strong><br><br>
-            <img src="../photos/leaf-spine.png" 
-                alt="Leaf-Spine Network Diagram" 
-                style="width:100%; max-width:700px; display:block; margin:1em auto;">
-            <br>
-                This shows leaf switches (Top-of-Rack) connecting to all spine switches, creating multiple paths for traffic and redundancy.
-            <br><br>
+                <strong>Basic Leaf-Spine Diagram:</strong><br><br>
+                <img src="../photos/leaf-spine.png" 
+                    alt="Leaf-Spine Network Diagram" 
+                    style="width:100%; max-width:700px; display:block; margin:1em auto;">
+                <br>
+                    This shows leaf switches (Top-of-Rack) connecting to all spine switches, creating multiple paths for traffic and redundancy.
+                <br><br>
 
-            <strong>Key Components:</strong><br>
-            &nbsp;&nbsp;<span style="font-weight:bold;">Leaf switches</span> - Top-of-Rack switches connecting servers.<br>
-            &nbsp;&nbsp;<span style="font-weight:bold;">Spine switches</span> - Backbone switches connecting all leaf switches.<br><br>
+                <strong>Key Components:</strong><br>
+                &nbsp;&nbsp;<span style="font-weight:bold;">Leaf switches</span> - Top-of-Rack switches connecting servers.<br>
+                &nbsp;&nbsp;<span style="font-weight:bold;">Spine switches</span> - Backbone switches connecting all leaf switches.<br><br>
 
-            <strong>Advantages:</strong><br>
-            - Higher capacity for east-west traffic using multiple paths and ECMP.<br>
-            - Redundant paths for fault tolerance; if one spine fails, traffic reroutes through others.<br><br>
+                <strong>Advantages:</strong><br>
+                - Higher capacity for east-west traffic using multiple paths and ECMP.<br>
+                - Redundant paths for fault tolerance; if one spine fails, traffic reroutes through others.<br><br>
 
-            <strong>Scaling with Super Spine:</strong><br><br>
-            <img src="../photos/leaf-spine-superspine.png" 
-                alt="Leaf-Spine with Super Spine Diagram" 
-                style="width:100%; max-width:700px; display:block; margin:1em auto;">
-            <br>
-                For very large data centers, a <strong>super spine layer</strong> connects multiple spine switches to each pod of leaf switches, allowing tens of thousands of racks to scale efficiently.
-            <br><br>
+                <strong>Scaling with Super Spine:</strong><br><br>
+                <img src="../photos/leaf-spine-superspine.png" 
+                    alt="Leaf-Spine with Super Spine Diagram" 
+                    style="width:100%; max-width:700px; display:block; margin:1em auto;">
+                <br>
+                    For very large data centers, a <strong>super spine layer</strong> connects multiple spine switches to each pod of leaf switches, allowing tens of thousands of racks to scale efficiently.
+                <br><br>
 
-            For more explanations see <a href="https://learningnetwork.cisco.com/s/question/0D56e0000EBtd2dCQB/a-guide-to-simple-twotier-threetier-and-spineleaf-designs" target="_blank">Cisco Leaf-Spine Guide</a>.
-        </p>
+                For more explanations see <a href="https://learningnetwork.cisco.com/s/question/0D56e0000EBtd2dCQB/a-guide-to-simple-twotier-threetier-and-spineleaf-designs" target="_blank">Cisco Leaf-Spine Guide</a>.
+            </p>
 
-        <button class="read-more" style="margin-top: 1em;">
-            See details <span class="arrow">▼</span>
-        </button>
+            <button class="read-more" style="margin-top: 1em;">
+                Read more <span class="arrow">▼</span>
+            </button>
 
-        <div class="tech-icons" style="margin-top: auto;">
-            <a href="https://www.cisco.com/c/en/us/solutions/data-center-virtualization/leaf-spine-architecture.html" target="_blank" rel="noopener noreferrer" title="Learn Leaf-Spine Architecture">
-                <i class="fas fa-network-wired"></i> <!-- represents networking / leaf-spine -->
-            </a>
+            <div class="tech-icons" style="margin-top: auto;">
+                <a href="https://www.cisco.com/c/en/us/solutions/data-center-virtualization/leaf-spine-architecture.html" target="_blank" rel="noopener noreferrer" title="Learn Leaf-Spine Architecture">
+                    <i class="fas fa-network-wired"></i> <!-- represents networking / leaf-spine -->
+                </a>
+            </div>
         </div>
-    </div>
         <!-- Notes Card End -->
         <div class="notes" style="display: flex;justify-content: center;align-items: center;max-width: unset;max-height: fit-content; min-height: unset; ">
             <a href="../index.html" style="font-weight: bold; color: #9eccfc;   ; text-decoration: underline; visibility: unset;">
