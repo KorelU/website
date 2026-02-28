@@ -237,10 +237,22 @@
                 </a>
             </div>
         </div>
-        <div class="project" style="display: flex;justify-content: center;align-items: center;max-width: unset;max-height: fit-content; min-height: unset;">
+        <div class="project" style="display: flex;justify-content: center;align-items: center;max-width: unset;max-height: fit-content; min-height: unset; ">
             <a href="../index.html" 
-            style="font-weight: bold; color: #9eccfc;   ; text-decoration: underline; visibility: unset;">
-                Go Home
+            style="
+                font-weight: bold;
+                color: #9eccfc;
+                text-decoration: underline;
+                font-size: 0.9em;
+                margin: 1em;
+                padding: 0.2em 0.5em;
+                border-radius: 4px;
+                background-color: rgba(158, 204, 252, 0.07);
+                transition: all 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='rgba(158, 204, 252, 0.12)'; this.style.color='#b8e0fc';"
+            onmouseout="this.style.backgroundColor='rgba(158, 204, 252, 0.05)'; this.style.color='#9eccfc';">
+            Go Home
             </a>
         </div>
     </div>

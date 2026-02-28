@@ -262,11 +262,10 @@ h3.super-large {
 #contact-me {
     background-color: inherit;
     /*background-color: rgb(45, 44, 49);*/
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 1em;
     margin-top: 0 auto;
     margin-bottom: 0 auto;
-    height: 200px;
+    /* height: 200px; */
 
 }
 
@@ -418,6 +417,11 @@ section {
 
 
 .project:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.notes:hover {
     transform: translateY(-10px); /* Moves the card up by 10px */
 box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.5); 
 }
@@ -811,8 +815,8 @@ html body header {
     #contact-me {
         background-color: inherit;
         /*background-color: rgb(45, 44, 49);*/
-        padding-top: 0;
-        height: 200px;
+        padding: 1em;
+        /* height: 200px; */
         margin: 2em auto;
 
     }
@@ -940,8 +944,8 @@ html body header {
     #contact-me {
         background-color: inherit;
         /*background-color: rgb(45, 44, 49);*/
-        padding-top: 0;
-        height: 200px;
+        padding: 1em;
+        /* height: 200px; */
         margin: 2em auto;
 
     }
@@ -1097,8 +1101,9 @@ html body header {
     #contact-me {
         background-color: inherit;
         /*background-color: rgb(45, 44, 49);*/
+        padding: 1em;
         padding-top: 0;
-        height: 200px;
+        /* height: 200px; */
         margin: 2em auto
 
     }
@@ -1534,11 +1539,10 @@ h3.super-large {
 #contact-me {
     background-color: inherit;
     /*background-color: rgb(45, 44, 49);*/
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 1em;
     margin-top: 0 auto;
     margin-bottom: 0 auto;
-    height: 200px;
+    /* height: 200px; */
 
 }
 
@@ -2101,8 +2105,8 @@ html body header {
     #contact-me {
         background-color: inherit;
         /*background-color: rgb(45, 44, 49);*/
-        padding-top: 0;
-        height: 200px;
+        padding: 1em;
+        /* height: 200px; */
         margin: 2em auto;
 
     }
@@ -2237,8 +2241,8 @@ html body header {
     #contact-me {
         background-color: inherit;
         /*background-color: rgb(45, 44, 49);*/
-        padding-top: 0;
-        height: 200px;
+        padding: 1em;
+        /* height: 200px; */
         margin: 2em auto;
 
     }
@@ -2424,8 +2428,8 @@ html body header {
     #contact-me {
         background-color: inherit;
         /*background-color: rgb(45, 44, 49);*/
-        padding-top: 0;
-        height: 200px;
+        padding: 1em;
+        /* height: 200px; */
         margin: 2em auto
 
     }
