@@ -2275,7 +2275,7 @@ html body header {
     .project-chart {
 
         width: 100%; 
-        max-width: 450px; 
+        max-width: 425px; 
         margin: 2em auto; 
         display: block
     }
@@ -2370,20 +2370,20 @@ html body header {
     
     /* Font size scaling based on h1, h2, and h3 default sizes */
     h1.super-large {
-        font-size: 3.25rem;  /* Scalable based on viewport width */
+        font-size: 3.75rem;  /* Scalable based on viewport width */
     }
      h3.super-large {
         font-size: 0.75rem;  /* Scalable based on viewport width */
     }
     h2 {
-        font-size: 1.4em;
+        font-size: 1.75em;
         font-weight: 700;
         color: #c9b49e;
         text-decoration: underline; /* Adds an underline to the h2 */
         padding-bottom: 0px;
     }
     h3 {
-        font-size: 1.2em;
+        font-size: 1.5em;
         font-weight: 700;
         color: #ffffff;
     }
@@ -2393,7 +2393,7 @@ html body header {
         color: #ffffff;
     }
     .left-align {
-        font-size: 1em;
+        font-size: 1.25em;
         text-align: left;
         font-weight: bold;
         font-family: 'Merriweather', serif;
@@ -2424,19 +2424,19 @@ html body header {
 
 
     nav a {
-        margin: 0 0.25em;
-        font-size: 0.5em;
+        margin: 0 0.5em;
+        font-size: 1em;
         text-decoration: underline; /* Adds an underline to all links */
         color:#c9b49e;
     }
     header{
         padding: 1.5em 1em 0.5em 1em;
-        padding: 4px;
-        gap: 0.1px;
+        padding: 15px;
+        gap: 0.3px;
     }
     #intro .right img.profile-image {
-        width: 150px;          /* Set the size of the image */
-        height: 150px;         /* Set the height equal to the width to make it a perfect circle */
+        width: 175px;          /* Set the size of the image */
+        height: 175px;         /* Set the height equal to the width to make it a perfect circle */
         border-radius: 50%;    /* This makes the image a circle */
         object-fit: cover;     /* Ensures the image covers the area without distortion */
         border: 3px solid #c9b49e; /* Optional: adds a white border around the circle */
@@ -2530,7 +2530,7 @@ html body header {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 700px) {
+@media (max-width: 650px) {
     .notes-card{
         min-width: unset
     }
